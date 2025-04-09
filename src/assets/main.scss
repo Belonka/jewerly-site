@@ -1,0 +1,88 @@
+@use "../../node_modules/@crossfox/css-start/dist/base.min.css";
+
+
+@use "variables" as *;
+@use "base" as *;
+@use "header";
+
+
+/* hero section  */
+.hero-section {
+    background: url('/images/hero1.avif') no-repeat;
+    background-position: 85% 50%;
+    background-size: contain;
+
+    .btn {
+        width: 30rem;
+    }
+}
+.name-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 40rem;
+    margin-left: 7rem;
+    h3 {
+        padding-bottom: 4rem;
+    }
+}
+
+.social-media{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-bottom: 4rem;
+    img {
+        width: 2.4rem;
+        height: 2.4rem;
+    }
+}
+
+ .container-card{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+ }
+
+ .card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    box-shadow: 0 0.02rem 0.15rem rgba(0,0,0,0.4);
+    width: 30rem;
+    text-align: center;
+    align-items: center;
+  }
+
+  .card-image {
+    width: 80%;
+    margin: 0 auto;
+    
+  }
+  
+//   .card-title {
+//     font-size: 1.8rem;
+//     margin-top: 2rem;
+//   }
+  
+  .card-price {
+    color: #666;
+    margin-top: 0.5rem;
+  }
+
+// @mixin gradient-bg($start, $end){
+//     background: linear-gradient(to bottom, $start, $end);
+// }
+
+// .gradient {
+//     width: 30rem;
+//     height: 50rem;
+//     @include gradient-bg(#f57, #777)
+// }
+
+// .test-btn {
+//     @include gradient-bg(blue, green )
+// }

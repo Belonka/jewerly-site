@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "name": "Каблучка  Lips",
+      "category": "rings",
+      "price": 380,
+      "isNew": true,
+      "image": "/images/Lips.PNG"
+    },
+    {
+      "id": 2,
+      "name": "Кільце Сердця",
+      "category": "rings",
+      "price": 400,
+      "isNew": false,
+      "image": "/images/ringHearts.PNG"
+    },
+    {
+      "id": 3,
+      "name": "Браслет Pin",
+      "category": "bracelets",
+      "price": 800,
+      "isNew": true,
+      "image": "/images/braceletsPin.JPG"
+    },
+    {
+      "id": 4,
+      "name": "Набір Gold",
+      "category": "sets",
+      "price": 800,
+      "isNew": true,
+      "image": "/images/setsGold.PNG"
+    },
+    {
+      "id": 5,
+      "name": "Каблучка Modern",
+      "category": "rings",
+      "price": 350,
+      "isNew": true,
+      "image": "/images/ringModern.PNG"
+    },
+    {
+      "id": 6,
+      "name": "Каблучка Abstraction",
+      "category": "rings",
+      "price": 420,
+      "isNew": false,
+      "image": "/images/ringAbstraction.PNG"
+    },
+    {
+      "id": 7,
+      "name": "Підвіска",
+      "category": "necklaces",
+      "price": 700,
+      "isNew": true,
+      "image": "/images/Necklace.PNG"
+    }
+  ]
+  

@@ -1,3 +1,39 @@
+
 @use "variables" as *;
-@use "base" as *;
-@use "header";
+
+.header {
+    a{
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .header-top {
+        margin-top: 3rem;
+        align-items: center;
+        .header-contact{
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        h1 {
+            font-weight: bold;
+            font-size: $font-m;
+            line-height: 1;
+        }
+        a {
+            font-weight: 500;
+            margin: 0.2rem;
+            font-size: $font-m;
+        }
+
+    }
+    .header-bottom {
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            gap: 3rem;
+            padding: 2rem 0;
+        }
+    }
+}
+
+// 1 rem = 10px, 16px = 1.6rem

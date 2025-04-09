@@ -1,0 +1,142 @@
+@use "variables" as *;
+
+$width-mob: 980px;
+
+
+
+@mixin isMobile {
+  @media (max-width: $width-mob) {
+    @content;
+  }
+}
+
+@mixin isDesktop {
+  @media (min-width: $width-mob) {
+    @content;
+  }
+}
+
+html {
+  font-size: 2.125vw;
+  scroll-padding-top: 4rem;
+  @include isDesktop {
+    font-size: 0.54vw;
+  }
+}
+
+body {
+  font: 400 185%/1.4 "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h2 {
+  font-family: "Ubuntu", sans-serif;
+  letter-spacing: -0.0075em;
+  color: $bg-color-2;
+  font-weight: 700;
+  font-size: $font-l;
+  line-height: 1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+
+}
+
+h3 {
+  font-size: $font-m;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+p + p {
+  margin-top: 2rem;
+}
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-cl {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.container {
+  width: 75%;
+}
+
+.container-2 {
+  width: 60%;
+}
+
+.container,
+.container-2 {
+  margin-left: auto;
+  margin-right: auto;
+  @include isMobile {
+    width: 90%;
+  }
+}
+
+.section {
+  padding: 2rem 0;
+  
+}
+
+.section-2 {
+  padding: 8rem 0;
+  @include isMobile {
+    padding: 5rem 0;
+  }
+}
+
+.btn {
+  display: block;
+  border: 0.2rem solid black;
+  border-radius: 0.05rem;
+  color: $secondary-text;
+  padding: 1.5rem 3rem;
+  transition: background-color 0.5s ease-out;
+  font-weight: 600;
+  font-size: $font-xs;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $accent-color;
+    color: #0a0908;;
+  }
+}
+
+.btn-1 {
+  @extend .btn;
+  background-color: $primary-text;
+  color: #fff;
+}
+
+.btn-2 {
+  @extend .btn;
+  background-color: $accent-color;
+  &:hover {
+    background-color: $title-text;
+    color: #0a0908;;
+  }
+}
+
+.btn-3 {
+  @extend .btn;
+  background-color: transparent;
+  border: 0.2rem solid transparent;
+  &:hover {
+    background-color: $title-text;
+    color: #0a0908;;
+  }
+}
+
+

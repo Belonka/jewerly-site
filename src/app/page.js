@@ -1,20 +1,19 @@
+import Header from "@/components/header/Header";
+import {getJewelryData} from '../lib/getJewelryData.js'
 import Image from "next/image";
 import Link from "next/link";
+import HeroBlock from "./HeroBlock";
+import NewItemsBlock from "./NewItemsBlock";
 
 
-export default function Home() {
+export default async function Home() {
+  const jewelryData = await getJewelryData();
   return (
     <div >
+      <Header/>
       <main >
-        {/* <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        /> */}
-<Link href='/kontakty'>Сторінка контактів</Link>
+       <HeroBlock />
+<NewItemsBlock items={jewelryData}/>
        
       </main>
       <footer >
