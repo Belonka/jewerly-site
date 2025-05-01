@@ -1,59 +1,188 @@
 [
-    {
-      "id": 1,
-      "name": "Каблучка  Lips",
-      "category": "rings",
-      "price": 380,
-      "isNew": true,
-      "image": "/images/Lips.PNG"
-    },
-    {
-      "id": 2,
-      "name": "Кільце Сердця",
-      "category": "rings",
-      "price": 400,
-      "isNew": false,
-      "image": "/images/ringHearts.PNG"
-    },
-    {
-      "id": 3,
-      "name": "Браслет Pin",
-      "category": "bracelets",
-      "price": 800,
-      "isNew": true,
-      "image": "/images/braceletsPin.JPG"
-    },
-    {
-      "id": 4,
-      "name": "Набір Gold",
-      "category": "sets",
-      "price": 800,
-      "isNew": true,
-      "image": "/images/setsGold.PNG"
-    },
-    {
-      "id": 5,
-      "name": "Каблучка Modern",
-      "category": "rings",
-      "price": 350,
-      "isNew": true,
-      "image": "/images/ringModern.PNG"
-    },
-    {
-      "id": 6,
-      "name": "Каблучка Abstraction",
-      "category": "rings",
-      "price": 420,
-      "isNew": false,
-      "image": "/images/ringAbstraction.PNG"
-    },
-    {
-      "id": 7,
-      "name": "Підвіска",
-      "category": "necklaces",
-      "price": 700,
-      "isNew": true,
-      "image": "/images/Necklace.PNG"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Каблучка  Lips",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 380,
+    "isNew": false,
+    "images": [
+      "/images/Lips.PNG"
+      ]
+  },
   
+  {
+    "id": 2,
+    "name": "Кільце Куля",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 400,
+    "isNew": true,
+    "alt": "",
+    "images": [
+      "/images/Ring-ball.PNG"
+      ]
+  },
+  {
+    "id": 3,
+    "name": "Кільце Сердця",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 800,
+    "isNew": true,
+    "images": [
+      "/images/Ring-hearts.JPG",
+      "/images/goldHeartHand.png"]
+  },
+  {
+    "id": 4,
+    "name": "Кільце Квіти",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 800,
+    "isNew": false,
+    "images": [
+      "/images/Ring-flowers.PNG"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Каблучка Сердечко",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 350,
+    "isNew": true,
+    "images": [
+      "/images/Ring-heart.PNG"
+      ]
+  },
+  {
+    "id": 6,
+    "name": "Каблучка Abstraction",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 420,
+    "isNew": false,
+    "images": [
+      "/images/ringAbstraction.PNG"
+     ]
+  },
+  {
+    "id": 7,
+    "name": "Підвіска",
+    "categoryUkr": "Підвіски",
+    "category": "lantsiuzhky",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/Necklace.PNG"
+      ]
+  },
+  {
+    "id": 8,
+    "name": "Набір Gold",
+    "categoryUkr": "Набори",
+    "category": "nabory",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/setsGold.PNG"]
+  },
+  {
+    "id": 9,
+    "name": "Браслет Pin",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/braceletsPin.JPG"]
+  },
+  {
+    "id": 10,
+    "name": "Каблучкa Black",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/Ring-black.JPG"]
+  },
+  {
+    "id": 11,
+    "name": "Браслет  Жемчуг",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": true,
+    "images": [
+      "/images/goldHeart.png",
+      "/images/goldHeartHand.png"]
+  },
+  {
+    "id": 12,
+    "name": "Браслет Цвях з камінцями",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/pinCrystall.png",
+      "/images/pinCrystall2.png.png"]
+  },
+  {
+    "id": 13,
+    "name": "Браслет  Хвиля",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/braceletWave.png",
+      "/images/braceletWave2.png"]
+  },
+  {
+    "id": 14,
+    "name": "Браслет Жемчуг",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/braceletPear.png",
+      "/images/braceletPear2.png"]
+  },
+  {
+    "id": 15,
+    "name": "Підвіска Жемчуг",
+    "categoryUkr": "Підвіски",
+    "category": "lantsiuzhky",
+    "price": 600,
+    "isNew": false,
+    "images": [
+      "/images/necklesPearl.png",
+      "/images/necklesPearl2.png"]
+  },
+  {
+    "id": 16,
+    "name": "Підвіска Heart",
+    "categoryUkr": "Підвіски",
+    "category": "lantsiuzhky",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/necklesHeart.png",
+      "/images/necklesHeart2.png"]
+  },
+  {
+    "id": 17,
+    "name": "Підвіска Crystall",
+    "categoryUkr": "Підвіски",
+    "category": "lantsiuzhky",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/necklesCrystall.png",
+      "/images/necklesCrystall2.png"]
+  }
+]

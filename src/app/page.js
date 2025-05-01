@@ -1,10 +1,9 @@
 import Header from "@/components/header/Header";
 import {getJewelryData} from '../lib/getJewelryData.js'
-import Image from "next/image";
-import Link from "next/link";
 import HeroBlock from "./HeroBlock";
 import NewItemsBlock from "./NewItemsBlock";
-
+import AboutUs from './AboutUs.jsx'
+import Footer from '../components/footer/Footer.jsx'
 
 export default async function Home() {
   const jewelryData = await getJewelryData();
@@ -14,10 +13,11 @@ export default async function Home() {
       <main >
        <HeroBlock />
 <NewItemsBlock items={jewelryData}/>
+       <AboutUs/>
        
       </main>
       <footer >
-     
+      <Footer/>
       </footer>
     </div>
   );

@@ -4,13 +4,15 @@
 @use "variables" as *;
 @use "base" as *;
 @use "header";
+@use "katalog";
+@use "sideBar";
 
 
 /* hero section  */
 .hero-section {
     background: url('/images/hero1.avif') no-repeat;
     background-position: 85% 50%;
-    background-size: contain;
+    background-size: 42%;
 
     .btn {
         width: 30rem;
@@ -22,7 +24,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 0.5rem;
-    width: 40rem;
+    width: 50rem;
     margin-left: 7rem;
     h3 {
         padding-bottom: 4rem;
@@ -41,37 +43,148 @@
     }
 }
 
+.h2-newItems{
+  margin-bottom: 4rem;
+}
+
  .container-card{
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
+    margin: 0 .2rem;
  }
 
  .card {
     background-color: white;
     padding: 1rem;
     border-radius: 0.2rem;
-    box-shadow: 0 0.02rem 0.15rem rgba(0,0,0,0.4);
+    box-shadow: 0.03rem 0.04rem 0.2rem 0.2rem rgba(0,0,0,0.1);
     width: 30rem;
+    // height: 40rem;
     text-align: center;
     align-items: center;
+    overflow: hidden;
+    &:hover {
+      transform: (1.05);
+      text-decoration: underline;
+      cursor: pointer;
+  }
   }
 
-  .card-image {
+  .new-item-img-container {
     width: 80%;
+    height: 25rem;
+    position: relative;
+    margin: 1rem auto;
+  }
+  
+  .card-title {
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    transition: transform 0.3s ease-out;
+    &:hover {
+      transform: (1.05);
+      text-decoration: underline;
+      cursor: pointer;
+  }
+  }
+  
+  .btn-newItem{
     margin: 0 auto;
+    margin-top: 7rem;
+  }
+
+  .aboutUs-main{
+    padding: 0;
+
+  }
+
+  .aboutUs{
+    // margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 20rem;
+  }
+
+  .about-video-section{
+    display: flex;  
+    align-items:flex-start;
+    position: relative;
+    z-index: -1;
+    // width: 100%;
+    height:80rem;
+    width: 80rem;
+  }
+
+  .about-video{
+    position: absolute;
     
+    width: 100%;
+    height:90%;
+    // display: block;
   }
+
+    .aboutUs-text{
+      font-size: $font-m;
+      align-items: center;
+      text-align: center;
+      width: 100rem;
+      button{
+        margin: 5rem auto;
+      }
+    }
+
+    .footer-main{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: $font-s;
+      border-top: 0.2rem solid #ccc;
+    }
+
+    .p-bold{
+      font-weight: 700;
+    }
+
+    .form-footer{
+      input{
+        border: 0.2rem solid #ccc;
+        width: 30rem;
+        margin-right: 1rem;
+      }
+      button{
+        width: 13rem;
+        background-color: $accent-color;
+        &:hover {
+          background-color: $title-text;
+    color: #0a0908;;
+        }
+      }
+    }
+
+    .form-agreement{
+      max-width: 40rem;
+      margin-top: 1rem;
+      input[type='checkbox']{
+        width: 1.6rem;
+        height: 1.6rem;
+        accent-color: #000;
+        margin: 0 0.5rem;
+        cursor: pointer;
+      }
+    }
+
+    .footer-2{
+      padding: 0.8rem 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      font-size: $font-s;
+      border-top: 0.2rem solid #ccc;
+      
+    }
   
-//   .card-title {
-//     font-size: 1.8rem;
-//     margin-top: 2rem;
-//   }
-  
-  .card-price {
-    color: #666;
-    margin-top: 0.5rem;
-  }
 
 // @mixin gradient-bg($start, $end){
 //     background: linear-gradient(to bottom, $start, $end);
