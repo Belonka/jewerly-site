@@ -1,12 +1,23 @@
 import React from 'react'
-
+import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
 
 
 export default function Politice() {
+  const breadcrumbItems = [
+    {
+      name: "Головна",
+      link: "/",
+    },
+    {
+      name: "Політика конфіденційності",
+      link: null,
+    },
+  ];
   return (
     <div>
       
             <section className='section-2 container'>
+            <Breadcrumbs items={breadcrumbItems} />
             <div className='payShip'>
             <h2>1. Збір персональних даних</h2>
             <p>Під час використання нашого сайту ми можемо збирати наступну інформацію:</p>

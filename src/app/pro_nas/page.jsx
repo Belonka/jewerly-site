@@ -1,13 +1,23 @@
 import React from 'react';
-
+import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
 
 
 export default function page() {
+
+  const breadcrumbItems = [
+    
+    {
+      name: "Про нас",
+      link: null,
+    },
+  ];
+
   return (
     <>
     
     <section className='section-2 container '>
-        <img src="images/imageAbout.png" alt="" className='about-img' />
+    <Breadcrumbs items={breadcrumbItems} />
+        <img src="/images/imageAbout.png" alt="" className='about-img' />
         
     <div className='about-container'>
       <h3 > Vetola — це простір краси, стилю та натхнення.</h3> <br /><p className='aboutPage-text'>Ми створили наш магазин із бажанням зробити стильні прикраси доступними кожній дівчині та жінці, яка хоче підкреслити свою індивідуальність. У Vetola ми зібрали колекції, що поєднують елегантність, легкість та сучасні тренди.</p>
@@ -24,6 +34,7 @@ export default function page() {
 </div>
     
     <div className='flex-sb about-conditions'>
+    
         <div className='about-category'>
         <img src="/icons/gift.svg" alt="" />
           <p>Шукаєте подарунок? У нас є чудові ідеї для ваших близьких.</p>

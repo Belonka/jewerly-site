@@ -1,5 +1,7 @@
-import {getJewelryData} from '@/lib/getJewelryData';
 
+
+import {getJewelryData} from '@/lib/getJewelryData';
+import ZoomGallery from '@/components/modals/ZoomGallery';
 import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
 
 export const dynamicParams = false;
@@ -29,10 +31,10 @@ export async function generateMetadata({ params }) {
 
   return {
     title: `${item.name} — Vetola`,
-    description: `Купіть ${item.name} за ${item.price} грн. Унікальні прикраси ручної роботи.`,
+    description: `Купіть ${item.name} за ${item.price} грн. Унікальні прикраси.`,
     openGraph: {
       title: `${item.name} — Vetola`,
-      description:  `Купіть ${item.name} за ${item.price} грн. Унікальні прикраси ручної роботи.`,
+      description:  `Купіть ${item.name} за ${item.price} грн. Унікальні прикраси.`,
       images: item.images[0],
     },
     twitter: {
@@ -65,26 +67,27 @@ export default async function PageItem({ params }) {
     { name: `${item.name}`, link: null },
   ];
 
+  
+
+
+
   return (
-    <section className="item-page">
+    <div className="item-page">
       <Breadcrumbs items={breadcrumbItems} />
       <h2>{item.name}</h2>
-      <div >
-      {item.images.map((src, idx) => (
-        <img className="image-gallery"
-          key={idx}
-          src={src}
-          alt={`${item.name} — фото ${idx + 1}`}
-        />
-      ))}
+      <div className="image-gallery">
+      <ZoomGallery images={item.images} /> 
+      </div>
+      <div className='item-details'>
       <p className="p-price">
-        {" "}
+       
         <strong>Ціна:</strong> {item.price} грн
       </p>
-      <p>Опис товару: </p>
+      <p className="p-price"><strong>Опис товару:</strong> </p>
       <button className="btn btn-buy">Купити </button>
       </div>
+      </div>
       
-     </section>
+     
   );
 }

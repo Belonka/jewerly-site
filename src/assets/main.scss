@@ -37,7 +37,13 @@
 .breadcrumb-section{
   display: flex;
   flex-direction: row;
-  font-weight: $font-m;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
+
+.breadcrumb-arrow{
+  margin: 0 .8rem;
+  font-size: 3rem;
 }
 
 .social-media{

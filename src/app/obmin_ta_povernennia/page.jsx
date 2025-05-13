@@ -1,10 +1,21 @@
 import React from 'react';
+import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
 
 export default function Return() {
+
+  const breadcrumbItems = [
+    
+    {
+      name: "Обмін і повернення",
+      link: null,
+    },
+  ];
+
   return (
     <div>
       
             <section className='section-2 container'>
+            <Breadcrumbs items={breadcrumbItems} />
             <div className='payShip'>
             <h2>Обмін та повернення</h2>
             <p>Ми прагнемо, щоб ви були задоволені своїми покупками. Якщо прикраса не підійшла — у вас завжди є можливість її повернути або обміняти.</p>

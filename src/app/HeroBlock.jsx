@@ -6,17 +6,17 @@ import React, { useState } from 'react';
  import Modal from '../components//modals/Modal'
 
 const socials = [
-  // {
-  //   href: "https://instagram.com/vetola.jewellery",
-  //   icon: "/icons/instagram2.svg",
-  //   alt: "Instagram",
-  // },
-  // { href: "tel:+380XXXXXXXXX", icon: "/icons/phone.svg", alt: "" },
-  // {
-  //   href: "https://t.me/yourTelegram",
-  //   icon: "/icons/telegram.svg",
-  //   alt: "Telegram",
-  // },
+  {
+    href: "https://instagram.com/vetola.jewellery",
+    icon: "/icons/instagram2.svg",
+    alt: "Instagram",
+  },
+  { href: "tel:+380XXXXXXXXX", icon: "/icons/phone.svg", alt: "" },
+  {
+    href: "https://t.me/yourTelegram",
+    icon: "/icons/telegram.svg",
+    alt: "Telegram",
+  },
 ];
 
 

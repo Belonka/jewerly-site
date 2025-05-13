@@ -1,5 +1,6 @@
 import { getJewelryData } from "@/lib/getJewelryData";
 import Link from "next/link";
+import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
 
 export const dynamicParams = false;
 
@@ -26,10 +27,22 @@ export default async function CategoryPage({ params }) {
     return <p>Категория «{category}» пуста или не найдена.</p>;
   }
 
+  const categoryUkr = items[0]?.categoryUkr || category;
 
+  const breadcrumbItems = [
+    {
+      name: "Каталог",
+      link: "/katalog",
+    },
+    {
+      name: categoryUkr,
+      link: null,
+    },
+  ];
 
   return (
-    <section className="section-2 ">
+    <section className="section-category ">
+      <Breadcrumbs items={breadcrumbItems} />
     <h2 className="">{items[0].categoryUkr}</h2>
       <ul className="container-card-category">
         {items.map(item => (

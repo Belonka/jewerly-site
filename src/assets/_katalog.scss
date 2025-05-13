@@ -7,6 +7,11 @@
     overflow: hidden;
 }
 
+.section-category{
+    align-items: flex-start;
+    
+}
+
 .category-section{
     max-width: 100rem;
     margin-bottom: 4rem;
@@ -20,6 +25,7 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin: 0 .3rem;
+    justify-content: start;
 }
 
 
@@ -72,6 +78,7 @@
 
 .p-price{
     text-decoration: none;
+    font-size: $font-m;
     &:hover{
     text-decoration: none;
     }

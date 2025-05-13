@@ -1,6 +1,7 @@
 import {getJewelryData} from '@/lib/getJewelryData';
 import Link from "next/link";
 import CatalogSlider from "@/app/katalog/CatalogSlider";
+import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
 
 export const metadata = {
   title: "Каталог прикрас Vetola",
@@ -30,8 +31,17 @@ export default async function CatalogPage() {
   const data = await getJewelryData();
 
   const categories = [...new Set(data.map((item) => item.category))];
+
+
+  const breadcrumbItems = [
+    {
+      name: "Каталог",
+      link: null,
+    },
+  ];
   return (
     <section className="">
+      <Breadcrumbs items={breadcrumbItems} />
       {categories.map((category) => {
         const filteredItems = data.filter(
           (item) => item.category === category

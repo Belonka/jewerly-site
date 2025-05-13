@@ -1,12 +1,21 @@
 import React from 'react';
-
+import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
 
 
 export default function PayShip() {
+
+  const breadcrumbItems = [
+    
+    {
+      name: "Оплата і доставка",
+      link: null,
+    },
+  ];
   return (
     <div>
      
       <section className='section-2 container'>
+      <Breadcrumbs items={breadcrumbItems} />
       <div className='payShip'>
       <h2>Оплата</h2>
       <p>У нашому інтернет-магазині Vetola ми дбаємо про те, щоб процес оплати був зручним та безпечним для кожного клієнта.</p>
