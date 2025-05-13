@@ -27,9 +27,12 @@ export default function Sidebar() {
                   cat.urlPart === "vsi_prykrasy" ? "" : cat.urlPart
                 }`}
               >
+                <span className="cat-title">
                 {cat.urlPart === "vsi_prykrasy" ? "Всі прикраси" : cat.title}
+                </span>
+                <span className="arrow-icon">→</span>
               </Link>
-              <span className="arrow-icon">→</span>
+              
             </li>
           ))}
         </ul>

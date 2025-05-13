@@ -1,5 +1,13 @@
-import React from "react";
 import Link from "next/link";
+
+const navItems = [
+  { href: "/katalog", label: "Каталог" },
+  { href: "/katalog/nabory", label: "Набори" },
+  { href: "/katalog/braslety", label: "Браслети" },
+  { href: "/katalog/kabluchky", label: "Кільця" },
+  { href: "/katalog/lantsiuzhky", label: "Ланцюжки" },
+  { href: "/#contacts", label: "Контакти" },
+];
 
 export default function Header() {
   return (
@@ -14,26 +22,13 @@ export default function Header() {
         </div>
       </div>
       <div className="header-bottom">
-        <nav>
+      <nav>
           <ul>
-            <li>
-              <Link href="/katalog">Каталог</Link>
-            </li>
-            <li>
-              <Link href="/katalog/nabory">Набори</Link>
-            </li>
-            <li>
-              <Link href="#">Браслети</Link>
-            </li>
-            <li>
-              <Link href="#">Кільця</Link>
-            </li>
-            <li>
-              <Link href="#">Ланцюжки</Link>
-            </li>
-            <li>
-              <Link href="#">Контакти</Link>
-            </li>
+            {navItems.map(({ href, label }) => (
+              <li key={href}>
+                <Link href={href}>{label}</Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>

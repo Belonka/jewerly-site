@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Card from "../components/card/Card";
 import Link from "next/link";
 
 export default function NewItemsBlock({ items }) {
@@ -10,31 +10,12 @@ export default function NewItemsBlock({ items }) {
 
       <div className="container-card">
         {newItems.map((item) => (
-          <Link href="#">
-            <div className="card" key={item.id}>
-              <div className="new-item-img-container">
-                <Image
-                  src={item.images[0]}
-                  alt={item.name}
-                  className="card-image"
-                  width={300}
-                  height={350}
-                />
-              </div>
-              <h3 className="card-title">{item.name}</h3>
-              <p className="p-price">
-                {" "}
-                <strong>Ціна:</strong> {item.price} грн
-              </p>
-            </div>
-          </Link>
-        ))}
-        <button className="btn btn-buy">Купити </button>
+       <Card key={item.id} item={item} /> 
+        ))} 
       </div>
 
-      <button className="btn-newItem btn-2">
-        <Link href="./catalog/Rings.jsx">Дивитися всі</Link>
-      </button>
+        <Link className="btn-newItem btn-2" href="/katalog">Дивитися всі</Link>
+
     </section>
   );
 }

@@ -8,9 +8,9 @@
     "isNew": false,
     "images": [
       "/images/Lips.PNG"
-      ]
+    ],
+    "slug": "kabluchka-lips"
   },
-  
   {
     "id": 2,
     "name": "Кільце Куля",
@@ -21,7 +21,8 @@
     "alt": "",
     "images": [
       "/images/Ring-ball.PNG"
-      ]
+    ],
+    "slug": "kiltse-kulia"
   },
   {
     "id": 3,
@@ -32,7 +33,9 @@
     "isNew": true,
     "images": [
       "/images/Ring-hearts.JPG",
-      "/images/goldHeartHand.png"]
+      "/images/goldHeartHand.png"
+    ],
+    "slug": "kiltse-serdtsia"
   },
   {
     "id": 4,
@@ -43,7 +46,8 @@
     "isNew": false,
     "images": [
       "/images/Ring-flowers.PNG"
-    ]
+    ],
+    "slug": "kiltse-kvity"
   },
   {
     "id": 5,
@@ -54,7 +58,8 @@
     "isNew": true,
     "images": [
       "/images/Ring-heart.PNG"
-      ]
+    ],
+    "slug": "kabluchka-serdechko"
   },
   {
     "id": 6,
@@ -65,18 +70,20 @@
     "isNew": false,
     "images": [
       "/images/ringAbstraction.PNG"
-     ]
+    ],
+    "slug": "kabluchka-abstraction"
   },
   {
     "id": 7,
-    "name": "Підвіска",
-    "categoryUkr": "Підвіски",
+    "name": "Ланцюжок",
+    "categoryUkr": "Ланцюжки",
     "category": "lantsiuzhky",
     "price": 700,
     "isNew": false,
     "images": [
       "/images/Necklace.PNG"
-      ]
+    ],
+    "slug": "lantsiuzhok"
   },
   {
     "id": 8,
@@ -86,7 +93,9 @@
     "price": 700,
     "isNew": false,
     "images": [
-      "/images/setsGold.PNG"]
+      "/images/setsGold.PNG"
+    ],
+    "slug": "nabir-gold"
   },
   {
     "id": 9,
@@ -96,7 +105,9 @@
     "price": 700,
     "isNew": false,
     "images": [
-      "/images/braceletsPin.JPG"]
+      "/images/braceletsPin.JPG"
+    ],
+    "slug": "braslet-pin"
   },
   {
     "id": 10,
@@ -106,7 +117,9 @@
     "price": 700,
     "isNew": false,
     "images": [
-      "/images/Ring-black.JPG"]
+      "/images/Ring-black.JPG"
+    ],
+    "slug": "kabluchka-black"
   },
   {
     "id": 11,
@@ -117,7 +130,9 @@
     "isNew": true,
     "images": [
       "/images/goldHeart.png",
-      "/images/goldHeartHand.png"]
+      "/images/goldHeartHand.png"
+    ],
+    "slug": "braslet-zhemchuh"
   },
   {
     "id": 12,
@@ -128,7 +143,9 @@
     "isNew": false,
     "images": [
       "/images/pinCrystall.png",
-      "/images/pinCrystall2.png.png"]
+      "/images/pinCrystall2.png.png"
+    ],
+    "slug": "braslet-tsviakh-z-kamintsiamy"
   },
   {
     "id": 13,
@@ -139,7 +156,9 @@
     "isNew": false,
     "images": [
       "/images/braceletWave.png",
-      "/images/braceletWave2.png"]
+      "/images/braceletWave2.png"
+    ],
+    "slug": "braslet-khvylia"
   },
   {
     "id": 14,
@@ -150,39 +169,47 @@
     "isNew": false,
     "images": [
       "/images/braceletPear.png",
-      "/images/braceletPear2.png"]
+      "/images/braceletPear2.png"
+    ],
+    "slug": "braslet-zhemchuh"
   },
   {
     "id": 15,
-    "name": "Підвіска Жемчуг",
-    "categoryUkr": "Підвіски",
+    "name": "Ланцюжок Жемчуг",
+    "categoryUkr": "Ланцюжки",
     "category": "lantsiuzhky",
     "price": 600,
     "isNew": false,
     "images": [
       "/images/necklesPearl.png",
-      "/images/necklesPearl2.png"]
+      "/images/necklesPearl2.png"
+    ],
+    "slug": "lantsiuzhok-zhemchuh"
   },
   {
     "id": 16,
-    "name": "Підвіска Heart",
-    "categoryUkr": "Підвіски",
+    "name": "Ланцюжок Heart",
+    "categoryUkr": "Ланцюжки",
     "category": "lantsiuzhky",
     "price": 700,
     "isNew": false,
     "images": [
       "/images/necklesHeart.png",
-      "/images/necklesHeart2.png"]
+      "/images/necklesHeart2.png"
+    ],
+    "slug": "lantsiuzhok-heart"
   },
   {
     "id": 17,
-    "name": "Підвіска Crystall",
-    "categoryUkr": "Підвіски",
+    "name": "Ланцюжок Crystall",
+    "categoryUkr": "Ланцюжки",
     "category": "lantsiuzhky",
     "price": 700,
     "isNew": false,
     "images": [
       "/images/necklesCrystall.png",
-      "/images/necklesCrystall2.png"]
+      "/images/necklesCrystall2.png"
+    ],
+    "slug": "lantsiuzhok-crystall"
   }
 ]

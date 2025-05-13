@@ -1,0 +1,19 @@
+
+.item-page{
+  width: 70%;
+  text-align: center;
+  align-items: center;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  .image-gallery img {
+    width: 30rem;
+    height: 35rem;
+    object-fit: cover;
+    border-radius: 8px;
+  }
