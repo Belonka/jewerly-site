@@ -1,3 +1,5 @@
+"use client" 
+import { useState } from "react";
 import Link from "next/link";
 
 const navItems = [
@@ -10,8 +12,14 @@ const navItems = [
 ];
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const menuToggle = () => {
+    setMenuOpen(prev => !prev)
+  }
+
   return (
-    <header className="header flex-cl container">
+    <header className={`header flex-cl container ${menuOpen ? "menu-active" : ""}`}>
       <div className="header-top flex-sb">
         <h1>
           <Link href="/">VETOLA</Link>
@@ -20,6 +28,14 @@ export default function Header() {
           <a href="tel:+14203659">+380 95 819 80 65</a>
           <button className="btn-2">Зв'язатись з нами</button>
         </div>
+
+        <div className="burger-menu-container"  onClick={menuToggle}>
+                        <div className="burger-icon flex-cl">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
       </div>
       <div className="header-bottom">
       <nav>

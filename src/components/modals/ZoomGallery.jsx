@@ -35,7 +35,7 @@ export default function ZoomGallery({ images }) {
 
   return (
     <>
-      <div className="image-gallery">
+      <div className="image-gallery-zoom">
         {images.map((src, idx) => (
           <img
             key={idx}

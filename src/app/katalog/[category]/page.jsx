@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const { category } = params;
+  const { category } = await params;
 
   const data = await getJewelryData();
   const itemsInCategory = data.filter((item) => item.category === category);

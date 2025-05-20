@@ -22,10 +22,10 @@ const Breadcrumbs = ({ items: itemsProps } = {}) => {
                 className="active-breadcrumb"
                 itemProp="item"
               >
-                <span itemProp="name">{item.name}</span>
+                <span itemProp="name" >{item.name}</span>
               </Link>
             ) : (
-              <span itemProp="name">{item.name}</span>
+              <span itemProp="name" className="breadcrumb-open">{item.name}</span>
             )}
             <meta itemProp="position" content={index + 1} />
             {index < items.length - 1 && (

@@ -5,7 +5,7 @@ export default function NewItemsBlock({ items }) {
   const newItems = items.filter((item) => item.isNew);
 
   return (
-    <section className="section-2 container">
+    <section className="section-2 container new-items">
       <h2 className="h2-newItems">Нові надходження</h2>
 
       <div className="container-card">

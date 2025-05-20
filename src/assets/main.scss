@@ -20,6 +20,13 @@
     .btn {
         width: 30rem;
     }
+    @include isMobile{
+      display: flex;
+      flex-direction: column;
+      background-position: 50% -2%;
+      background-size: 45%;
+      padding-bottom: 0;
+    }
 }
 .name-title{
     display: flex;
@@ -32,18 +39,45 @@
     h3 {
         padding-bottom: 4rem;
     }
+    @include isMobile{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 0 auto;
+      padding-top: 13rem;
+    
+     h2{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem auto 0;
+      text-align: center;
+     }
+     h3 {
+      padding-top: 2rem;
+  }
+    }
 }
 
 .breadcrumb-section{
   display: flex;
   flex-direction: row;
-  font-size: 3rem;
+  font-size: 2rem;
   padding-bottom: 2rem;
+  color: #ccc;
+  &:hover{
+    color: #000;
+  }
+}
+
+.breadcrumb-open{
+  color: #000;
 }
 
 .breadcrumb-arrow{
   margin: 0 .8rem;
-  font-size: 3rem;
+  font-size: 2rem;
+  color: #ccc;
 }
 
 .social-media{
@@ -56,10 +90,23 @@
         width: 2.4rem;
         height: 2.4rem;
     }
+    @include isMobile{
+      display: none;
+    }
+}
+
+.new-items{
+  @include isMobile{
+    padding: 1rem auto;
+  }
 }
 
 .h2-newItems{
   margin-bottom: 4rem;
+  @include isMobile{
+    font-size: $font-l;
+    text-align: center;
+  }
 }
 
  .container-card{
@@ -75,20 +122,18 @@
     border-radius: 0.2rem;
     box-shadow: 0.03rem 0.04rem 0.2rem 0.2rem rgba(0,0,0,0.1);
     width: 30rem;
-    // height: 40rem;
     text-align: center;
     align-items: center;
     overflow: hidden;
-    &:hover {
-      transform: (1.05);
-      text-decoration: underline;
-      cursor: pointer;
-  }
+    @include isMobile{
+      width: 100%;
+      // height: 100%;
+    }
   }
 
   .new-item-img-container {
     width: 90%;
-    height: 25rem;
+    height: 30rem;
     position: relative;
     margin: 1rem auto;
     object-fit: cover;
@@ -113,15 +158,19 @@
 
   .aboutUs-main{
     padding: 0;
-
+    font-size: $font-xl;
   }
 
   .aboutUs{
     // margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:flex-start;
+    align-items:center;
     // gap: 20rem;
+    @include isMobile{
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .about-video-section{
@@ -146,7 +195,7 @@
       font-size: $font-m;
       align-items: center;
       text-align: center;
-      width: 100rem;
+      width: 80%;
       .btn-1{
         margin: 5rem auto;
         max-width: 40rem;

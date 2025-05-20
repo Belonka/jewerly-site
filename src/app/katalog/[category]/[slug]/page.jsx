@@ -1,8 +1,9 @@
 
 
 import {getJewelryData} from '@/lib/getJewelryData';
-import ZoomGallery from '@/components/modals/ZoomGallery';
+// import ZoomGallery from '@/components/modals/ZoomGallery';
 import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
+import CardSlider from './CardSlider'
 
 export const dynamicParams = false;
 
@@ -52,7 +53,8 @@ export default async function PageItem({ params }) {
 
 
   const item = jewelryData.find(
-         (item) => item.category === params.category&& item.slug ===  params.slug);
+    (item) => item.category === category && item.slug === slug
+  );
       
 
   if (!item) {
@@ -76,14 +78,26 @@ export default async function PageItem({ params }) {
       <Breadcrumbs items={breadcrumbItems} />
       <h2>{item.name}</h2>
       <div className="image-gallery">
-      <ZoomGallery images={item.images} /> 
-      </div>
+      <CardSlider images={item.images} /> 
+      
       <div className='item-details'>
       <p className="p-price">
        
         <strong>Ціна:</strong> {item.price} грн
       </p>
-      <p className="p-price"><strong>Опис товару:</strong> </p>
+      </div>
+      
+      {item.material && (
+    <p className="p-price">
+      <strong>Матеріал:</strong> {item.material}
+    </p>
+  )}
+
+  {item.size && (
+    <p className="p-price">
+      <strong>Розмір:</strong> {item.size}
+    </p>
+  )}
       <button className="btn btn-buy">Купити </button>
       </div>
       </div>

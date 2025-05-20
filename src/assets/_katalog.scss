@@ -1,7 +1,11 @@
 @use "variables" as *;
 @use "base" as *;
 
-
+.catalog-layout {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 .section-2{
     box-sizing: border-box;
     overflow: hidden;
@@ -13,10 +17,13 @@
 }
 
 .category-section{
-    max-width: 100rem;
+    width: 100rem;
     margin-bottom: 4rem;
     h3{
         margin: 2rem auto;
+    }
+    @include isMobile{
+        width: 42rem;
     }
 }
 
@@ -26,6 +33,7 @@
     gap: 2rem;
     margin: 0 .3rem;
     justify-content: start;
+    
 }
 
 
@@ -56,11 +64,11 @@
 }
 
 .custom-prev{
-    left: -3rem;
+    left: 1rem;
 }
 
 .custom-next{
-    right: -1rem;
+    right: 1rem;
 }
 
 

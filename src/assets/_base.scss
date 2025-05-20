@@ -68,7 +68,7 @@ p + p {
   justify-content: space-between;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 2rem;
+  // margin-top: 2rem;
 }
 
 .container {
@@ -94,7 +94,7 @@ p + p {
 }
 
 .section-2 {
-  padding: 8rem 0;
+  padding: 4rem 0;
   @include isMobile {
     padding: 5rem 0;
   }

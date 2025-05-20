@@ -4,7 +4,7 @@ export default function CatalogLayout({ children }) {
   return (
    <>
 
-    <div className="flex-sb container section-2">
+    <div className="catalog-layout container section-2">
       <SideBar />
  {children}
     </div>

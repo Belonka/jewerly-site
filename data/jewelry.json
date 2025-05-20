@@ -7,9 +7,12 @@
     "price": 380,
     "isNew": false,
     "images": [
-      "/images/Lips.PNG"
+      "/images/Lips.PNG",
+      "/images/ring-Lips.png"
     ],
-    "slug": "kabluchka-lips"
+    "slug": "kabluchka-lips",
+    "material": "stainless steel",
+    "size": "17mm"
   },
   {
     "id": 2,
@@ -20,9 +23,12 @@
     "isNew": true,
     "alt": "",
     "images": [
-      "/images/Ring-ball.PNG"
+      "/images/Ring-ball.PNG",
+      "/images/ring-ball2.png"
     ],
-    "slug": "kiltse-kulia"
+    "slug": "kiltse-kulia",
+    "material": "stainless steel",
+    "size": "17mm"
   },
   {
     "id": 3,
@@ -32,10 +38,12 @@
     "price": 800,
     "isNew": true,
     "images": [
-      "/images/Ring-hearts.JPG",
-      "/images/goldHeartHand.png"
+      "/images/Ring-hearts.JPG"
+     
     ],
-    "slug": "kiltse-serdtsia"
+    "slug": "kiltse-serdtsia",
+   "material": "stainless steel",
+    "size": "17mm"
   },
   {
     "id": 4,
@@ -47,7 +55,9 @@
     "images": [
       "/images/Ring-flowers.PNG"
     ],
-    "slug": "kiltse-kvity"
+    "slug": "kiltse-kvity",
+    "material": "stainless steel",
+    "size": "17mm"
   },
   {
     "id": 5,
@@ -57,9 +67,12 @@
     "price": 350,
     "isNew": true,
     "images": [
-      "/images/Ring-heart.PNG"
+      "/images/Ring-heart.PNG",
+      "/images/ring-heart2.png"
     ],
-    "slug": "kabluchka-serdechko"
+    "slug": "kabluchka-serdechko",
+    "material": "stainless steel",
+    "size": "18mm"
   },
   {
     "id": 6,
@@ -71,11 +84,13 @@
     "images": [
       "/images/ringAbstraction.PNG"
     ],
-    "slug": "kabluchka-abstraction"
+    "slug": "kabluchka-abstraction",
+    "material": "stainless steel",
+    "size": "17mm"
   },
   {
     "id": 7,
-    "name": "Ланцюжок",
+    "name": "Ланцюжок Snake",
     "categoryUkr": "Ланцюжки",
     "category": "lantsiuzhky",
     "price": 700,
@@ -83,7 +98,9 @@
     "images": [
       "/images/Necklace.PNG"
     ],
-    "slug": "lantsiuzhok"
+    "slug": "lantsiuzhok",
+    "description": "stainless steel",
+    "size": "370mm"
   },
   {
     "id": 8,
@@ -93,9 +110,12 @@
     "price": 700,
     "isNew": false,
     "images": [
-      "/images/setsGold.PNG"
+      "/images/setsGold.PNG",
+      "/images/set-Gold2.avif"
     ],
-    "slug": "nabir-gold"
+    "slug": "nabir-gold",
+    "material": "stainless steel",
+    "size": "17mm"
   },
   {
     "id": 9,
@@ -107,7 +127,9 @@
     "images": [
       "/images/braceletsPin.JPG"
     ],
-    "slug": "braslet-pin"
+    "slug": "braslet-pin",
+    "material": "stainless steel",
+    "size": "17mm"
   },
   {
     "id": 10,
@@ -119,7 +141,9 @@
     "images": [
       "/images/Ring-black.JPG"
     ],
-    "slug": "kabluchka-black"
+    "slug": "kabluchka-black",
+    "material": "stainless steel",
+    "size": "17mm"
   },
   {
     "id": 11,
@@ -132,7 +156,9 @@
       "/images/goldHeart.png",
       "/images/goldHeartHand.png"
     ],
-    "slug": "braslet-zhemchuh"
+    "slug": "braslet-zhemchuh",
+    "material": "stainless steel",
+    "size": "400mm"
   },
   {
     "id": 12,
@@ -145,7 +171,9 @@
       "/images/pinCrystall.png",
       "/images/pinCrystall2.png.png"
     ],
-    "slug": "braslet-tsviakh-z-kamintsiamy"
+    "slug": "braslet-tsviakh-z-kamintsiamy",
+    "material": "stainless steel",
+    "size": "400mm"
   },
   {
     "id": 13,
@@ -158,7 +186,9 @@
       "/images/braceletWave.png",
       "/images/braceletWave2.png"
     ],
-    "slug": "braslet-khvylia"
+    "slug": "braslet-khvylia",
+    "material": "stainless steel",
+    "size": "400mm"
   },
   {
     "id": 14,
@@ -171,7 +201,9 @@
       "/images/braceletPear.png",
       "/images/braceletPear2.png"
     ],
-    "slug": "braslet-zhemchuh"
+    "slug": "braslet-zhemchuh",
+    "material": "stainless steel",
+    "size": "200mm"
   },
   {
     "id": 15,
@@ -184,7 +216,9 @@
       "/images/necklesPearl.png",
       "/images/necklesPearl2.png"
     ],
-    "slug": "lantsiuzhok-zhemchuh"
+    "slug": "lantsiuzhok-zhemchuh",
+    "material": "stainless steel",
+    "size": "400mm"
   },
   {
     "id": 16,
@@ -197,7 +231,9 @@
       "/images/necklesHeart.png",
       "/images/necklesHeart2.png"
     ],
-    "slug": "lantsiuzhok-heart"
+    "slug": "lantsiuzhok-heart",
+    "material": "stainless steel",
+    "size": "420mm"
   },
   {
     "id": 17,
@@ -210,6 +246,8 @@
       "/images/necklesCrystall.png",
       "/images/necklesCrystall2.png"
     ],
-    "slug": "lantsiuzhok-crystall"
+    "slug": "lantsiuzhok-crystall",
+    "material": "stainless steel",
+    "size": "400mm"
   }
 ]

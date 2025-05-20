@@ -1,6 +1,7 @@
-
+@use "base" as *;
 .item-page{
-  width: 90%;
+  width: 100%;
+  
   text-align: center;
   align-items: center;
   h2{
@@ -10,9 +11,15 @@
 
 .image-gallery {
     display: flex;
-    flex-direction: row;
+    width: 100%;
+    flex-direction: column;
     gap: 2rem;
     justify-content: center;
+    align-items: center;
+    @include isMobile{
+      display: flex;
+      align-items: center;
+    }
   }
   
   .image-gallery img {
@@ -21,39 +28,163 @@
   cursor: pointer;
   border-radius: .8rem;
   transition: transform 0.3s ease;
+  object-fit: cover;
   }
 
-  .lightbox-thumb {
-    width: 200px;
-    height: auto;
-    cursor: pointer;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-
-  .lightbox-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
+  .cardSwiper-main {
     width: 100%;
-    height: 100%;
-    background: rgba(152, 149, 149, 0.5);
-    backdrop-filter: blur(2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+    max-width: 600px;
+    height: 420px;
+    margin-bottom: 20px;
   }
   
-  .lightbox-full {
-    max-width: 90%;
-    max-height: 90%;
-    transform: scale(1.5);
-    transition: transform 0.3s ease;
+  .cardSwiper-main img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
     border-radius: 8px;
-    cursor: zoom-in;
+  }
+  
+  /* Миниатюры */
+  .cardSwiper-thumbs {
+    width: 100%;
+    max-width: 600px;
+    height: 90px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .cardSwiper-thumbs .swiper-slide {
+    height: 100%;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .cardSwiper-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+  
+  .cardSwiper-thumbs img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
   }
 
-  .item-details{
-    margin: 2rem;
-  }
+  // .lightbox-thumb {
+  //   width: 200px;
+  //   height: auto;
+  //   cursor: pointer;
+  //   border-radius: 8px;
+  //   transition: transform 0.3s ease;
+  // }
+
+  // .lightbox-overlay {
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgba(152, 149, 149, 0.5);
+  //   backdrop-filter: blur(2);
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   z-index: 1000;
+  // }
+  
+  // .lightbox-full {
+  //   max-width: 90%;
+  //   max-height: 90%;
+  //   transform: scale(1.5);
+  //   transition: transform 0.3s ease;
+  //   border-radius: 8px;
+  //   cursor: zoom-in;
+  // }
+
+  // .item-details{
+  //   margin: 2rem;
+  //   .btn-buy{
+  //     width: 20rem;
+  //     margin-top: 2rem;
+  //     padding: 1.3rem 0;
+  //   }
+  // }
+
+  // body {
+  //   background: #eee;
+  //   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  //   font-size: 14px;
+  //   color: #000;
+  //   margin: 0;
+  //   padding: 0;
+  // }
+  
+  // .swiper {
+  //   width: 100%;
+  //   height: 30rem;
+  // }
+  
+  // .swiper-slide {
+  //   text-align: center;
+  //   font-size: 18px;
+  //   background: #fff;
+  
+  //   /* Center slide text vertically */
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+  
+  // .swiper-slide img {
+  //   display: block;
+  //   width: 50%;
+  //   height: 50%;
+  //   object-fit: cover;
+  // }
+  
+  // body {
+  //   background: #000;
+  //   color: #000;
+  // }
+  
+  // .swiper {
+  //   width: 100%;
+  //   height: 100%;
+  //   margin-left: auto;
+  //   margin-right: auto;
+  // }
+  
+  // .swiper-slide {
+  //   background-size: cover;
+  //   background-position: center;
+  // }
+  
+  // .mySwiper2 {
+  //   height: 50%;
+  //   width: 100%;
+  // }
+  
+  // .mySwiper {
+  //   height: 20%;
+  //   box-sizing: border-box;
+  //   padding: 10px 0;
+  // }
+  
+  // .mySwiper .swiper-slide {
+  //   width: 50rem;
+  //   height: 20%;
+  //   opacity: 0.4;
+  // }
+
+  // .mySwiper .swiper-slide-thumb-active {
+  //   opacity: 1;
+  // }
+  
+  // .swiper-slide img {
+  //   display: block;
+  //   width: 80%;
+  //   height: 25rem;
+  //   object-fit: cover;
+  // }

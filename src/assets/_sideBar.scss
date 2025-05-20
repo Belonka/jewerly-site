@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "base" as *;
 
 .sidebar{
     display: flex;
@@ -11,6 +12,9 @@
     height: 100%; 
     box-sizing: border-box;
     position: sticky;
+    @include isMobile{
+        display: none;
+    }
 }
 
 .menu-sidebar{
@@ -21,6 +25,7 @@
     width: 30rem;
     text-transform: uppercase;
     padding: 1rem 2rem;
+   
 }
 
 .nav-sideBar{
