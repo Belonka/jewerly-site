@@ -9,6 +9,7 @@
 @use "infoPages";
 @use "pageItem";
 @use "modal";
+@use "cart";
 
 
 /* hero section  */
@@ -212,6 +213,10 @@
         flex-direction: column;
         gap: 4rem;
       }
+    }
+
+    .ul-footer{
+      margin-top: 1rem;
     }
 
     .social-media-footer{

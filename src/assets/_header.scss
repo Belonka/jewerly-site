@@ -32,6 +32,14 @@
         }
         
     }
+
+    .private-room{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      gap: 3rem;
+    }
+    
     .header-bottom {
         ul {
             display: flex;

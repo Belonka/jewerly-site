@@ -1,7 +1,10 @@
 
 import Link from "next/link";
+import Button from '../button/Button' ;
+
 
 export default function Card({ item }) {
+  
 
   return (
     <>
@@ -15,7 +18,7 @@ export default function Card({ item }) {
       <p className="p-price">
         <strong>Ціна:</strong> {item.price} грн
       </p>
-      <button className="btn btn-buy">Купити</button>
+      <Button item={item}/>
       </div>
     </>
   )

@@ -2,6 +2,7 @@ import { Open_Sans, Cormorant_Garamond } from "next/font/google";
 import "@/assets/main.scss";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import { CartProvider } from "@/context/CartContext";
 
 const openSans =  Open_Sans({
   variable: "--font-open-sans",
@@ -23,11 +24,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="uk">
       <body className={`${openSans.variable} ${cormorantGaramondMono.variable}`}>
+      <CartProvider>
         <Header />
         <main>
         {children}
         </main>
         <Footer />
+        </CartProvider>
       </body>
     </html>
   );
