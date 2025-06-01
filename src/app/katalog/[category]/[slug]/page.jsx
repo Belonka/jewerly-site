@@ -4,6 +4,8 @@ import {getJewelryData} from '@/lib/getJewelryData';
 // import ZoomGallery from '@/components/modals/ZoomGallery';
 import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
 import CardSlider from './CardSlider'
+import Button from '@/components/button/Button';
+
 
 export const dynamicParams = false;
 
@@ -98,7 +100,8 @@ export default async function PageItem({ params }) {
       <strong>Розмір:</strong> {item.size}
     </p>
   )}
-      <button className="btn btn-buy">Купити </button>
+ 
+    <Button item={item} />
       </div>
       </div>
       

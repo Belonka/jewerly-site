@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import Link from "next/link";
+import Card from "@/components/card/Card";
 
 export default function CatalogSlider({ items }) {
 
@@ -49,25 +50,13 @@ export default function CatalogSlider({ items }) {
           },
         }}
       >
-        {items.map((item) => (
-          <SwiperSlide key={item.id}>
-            <div className="card">
-              <Link href={`/katalog/${item.category}/${item.slug}`}>
-                <img
-                  className="new-item-img-container"
-                  src={item.images[0]}
-                  alt={item.name}
-                />
-                <h3 className="card-title">{item.name}</h3>
-              </Link>
-              <p className="p-price">
-                {" "}
-                <strong>Ціна:</strong> {item.price} грн
-              </p>
-              <button className="btn btn-buy">Купити</button>
-            </div>
+       
+          <SwiperSlide >
+          {items.map((item) => (
+            <Card key={item.id} item={item} />
+             ))}
           </SwiperSlide>
-        ))}
+       
       </Swiper>
     </div>
   );

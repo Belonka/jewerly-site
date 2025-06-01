@@ -3,10 +3,11 @@ import { useCart } from '@/context/CartContext';
 
 
 export default function CartItem({item}) {
-    const {addToCart, removeFromCart, deleteCart} = useCart;
+    const {addToCart, removeFromCart, deleteItem} = useCart();
 
     const total = Number(item.price) * item.quantity;
   return (
+     <>
     <div className='cart-item'>
         <div className='cart-name-image'>
         <Image src={item.images[0]} alt={item.name} width={80} height={80} />
@@ -20,13 +21,17 @@ export default function CartItem({item}) {
                 <span>{item.quantity}</span>
                 <button onClick={() => addToCart(item)}>+</button>
                 </div>
-                <button onClick={() => deleteCart} className='btn-deleteCart btn-3'>Видалити</button>
+                <button onClick={() => deleteItem(item)} className='btn-deleteCart '>Видалити</button>
                 </div>
         </div>
         
         <div className='cart-item-price'>
         <strong><p className='p-bold'>{total.toFixed(2)}</p></strong> <p>грн</p>
         </div>
+        
+        
     </div>
+    
+    </>
   )
 }

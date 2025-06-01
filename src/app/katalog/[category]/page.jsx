@@ -1,6 +1,7 @@
 import { getJewelryData } from "@/lib/getJewelryData";
 import Link from "next/link";
 import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
+import Card from "@/components/card/Card";
 
 export const dynamicParams = false;
 
@@ -45,22 +46,9 @@ export default async function CategoryPage({ params }) {
       <Breadcrumbs items={breadcrumbItems} />
     <h2 className="">{items[0].categoryUkr}</h2>
       <ul className="container-card-category">
-        {items.map(item => (
-          <li key={item.id} className="card">
-            <Link href={`/katalog/${item.category}/${item.slug}`}>
-            
-                <img className='new-item-img-container'
-                  src={item.images[0]}
-                  alt={item.name}
-               
-                />
-                <h3 className="card-title">{item.name}</h3>
-              
-            </Link>
-            <p className='p-price'> <strong>Ціна:</strong> {item.price} грн</p>
-            < button className='btn btn-buy'>Купити </button>
-          </li>
-        ))}
+        {items.map((item) => (
+                   <Card key={item.id} item={item} />
+                    ))}
       </ul>
     </section>
   );
