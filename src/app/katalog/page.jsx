@@ -40,7 +40,7 @@ export default async function CatalogPage() {
     },
   ];
   return (
-    <section className="">
+    <section className="container section-2">
       <Breadcrumbs items={breadcrumbItems} />
       {categories.map((category) => {
         const filteredItems = data.filter(
@@ -53,8 +53,10 @@ export default async function CatalogPage() {
             <Link href={`/katalog/${category}`}>
               <h2 className="">{categoryNameUkr}</h2>
             </Link>
-            {/* <div className="swiper-cards"> */}
+            {/* <div className='catalog-card'> */}
+            <div className="container-card-category">
             <CatalogSlider items={filteredItems} />
+            </div>
             {/* </div> */}
             <div className="btn-category">
               <Link href={`/katalog/${category}`}>

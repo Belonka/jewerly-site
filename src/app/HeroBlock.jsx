@@ -48,12 +48,12 @@ export default function HeroBlock() {
         </nav>
 
         <div className="name-title">
-          <h2> Сучасні прикраси </h2> 
+          <h2 className="h2-hero"> Ідеальне доповнення до твого образу </h2> 
           <h3>Твій стиль починається тут</h3>
         
         
-        <Link href="/katalog" className="btn-1"> Дивитися асортимент</Link>
-        <button className="btn-3" onClick={() => setActiveModal('consult')}>Замовити консультацію</button>
+        <Link href="/katalog" className="btn-1 "> Дивитися асортимент</Link>
+        <button className="btn-3 btn-consult" onClick={() => setActiveModal('consult')}>Замовити консультацію</button>
         </div>
       </div>
      

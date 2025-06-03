@@ -1,37 +1,46 @@
 @use "variables" as *;
 @use "base" as *;
 
-.about-section{
-    font-size: $font-l;
-    padding-bottom: 2rem;
+// .about-section{
+//     font-size: $font-l;
+//     padding-bottom: 2rem;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+
+//     p{
+//         font-size: $font-m;
+//     }
+// }
+
+.proNas-flex{
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    p{
-        font-size: $font-m;
-    }
+    // gap: 4rem;
 }
 
-.about-container{
+.about-text{
     text-align: center;
-    margin: 7rem auto;
+    // margin: 7rem auto;
+    width: 70%;
+    align-items: center;
 }
 
 .aboutPage-text{
     font-size: $font-m;
       align-items: center;
       text-align: center;
-      margin: 7rem auto;
+      margin: 2rem auto;
 }
 
 .image-box{
-    border: 0.2rem solid #b2adad;
-    border-radius: 1rem;
-    box-shadow: 0 0.8rem 2.4rem rgba(0,0,0,0.3);
-    padding: 7rem 0;
-    max-width: 80%;
-    margin: 2rem auto;
+    display: flex;
+  align-items: flex-start;
+  max-width: 90%;
+  max-height: 100%;
+  margin: 2rem auto;
+
     @include isMobile{
         padding: 2rem ;
         max-width: 80%;
@@ -39,12 +48,10 @@
 }
 
 .about-img{
-    max-width: 100%;
-    margin: 0 auto;
-    display: block;
-    border-radius: 1rem;
-    height: auto;
-    box-shadow: 0 0.8rem 2.4rem rgba(0,0,0,0.5);
+    max-width: 90%;
+    object-fit: cover;
+    height: 70rem;
+    
 }
 
 .about-conditions{

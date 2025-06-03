@@ -1,6 +1,7 @@
 'use client'
 import {useCart} from '@/context/CartContext';
 import CartItem from '@/components/cartItem/CartItem';
+import Link from "next/link";
 
 export default function ShoppingCartPage(){
     const {cartItems} = useCart()
@@ -17,6 +18,7 @@ export default function ShoppingCartPage(){
             <p> Ваша корзина порожня  </p>
          ) : (
             cartItems.map((item) => (
+                
                 <CartItem key={item.id} 
                 item={item} 
                 />              

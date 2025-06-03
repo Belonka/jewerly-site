@@ -1,7 +1,10 @@
+
 import { getJewelryData } from "@/lib/getJewelryData";
 import Link from "next/link";
 import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
 import Card from "@/components/card/Card";
+import SortItem from "@/components/sortItem/SortItem";
+
 
 export const dynamicParams = false;
 
@@ -44,12 +47,14 @@ export default async function CategoryPage({ params }) {
   return (
     <section className="section-category ">
       <Breadcrumbs items={breadcrumbItems} />
-    <h2 className="">{items[0].categoryUkr}</h2>
-      <ul className="container-card-category">
+      <h2 className="">{items[0].categoryUkr}</h2>
+      <SortItem items={items} />
+    
+      {/* <ul className="container-card-category">
         {items.map((item) => (
                    <Card key={item.id} item={item} />
                     ))}
-      </ul>
+      </ul> */}
     </section>
   );
 }

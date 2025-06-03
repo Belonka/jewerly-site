@@ -15,8 +15,9 @@
 /* hero section  */
 .hero-section {
     background: url('/images/hero1.avif') no-repeat;
-    background-position: 85% 50%;
+    background-position: 80% 50%;
     background-size: 42%;
+    padding-bottom: 2rem;
 
     .btn {
         width: 30rem;
@@ -37,8 +38,16 @@
     gap: 0.5rem;
     width: 50rem;
     margin-left: 7rem;
+    .h2-hero{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem auto 0;
+      text-align: center;
+      font-size: 6rem;
+     }
     h3 {
-        padding-bottom: 4rem;
+        padding: 3rem 0;
     }
     @include isMobile{
       display: flex;
@@ -47,13 +56,7 @@
       margin: 0 auto;
       padding-top: 13rem;
     
-     h2{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 2rem auto 0;
-      text-align: center;
-     }
+     
      h3 {
       padding-top: 2rem;
   }
@@ -65,7 +68,7 @@
   flex-direction: row;
   font-size: 2rem;
   padding-bottom: 2rem;
-  color: #ccc;
+  color: #766f6f;
   &:hover{
     color: #000;
   }
@@ -83,17 +86,26 @@
 
 .social-media{
     display: flex;
-    align-items: start;
+    align-items: end;
     flex-direction: column;
     gap: 2.5rem;
-    padding-bottom: 4rem;
+    
     img {
         width: 2.4rem;
         height: 2.4rem;
+        
+        transition: transform 0.5s ease;
+        &:hover{
+      transform: scale(1.5);
+    }
     }
     @include isMobile{
       display: none;
     }
+}
+
+.btn-consult{
+  padding: 1.8rem;
 }
 
 .new-items{
@@ -179,16 +191,16 @@
     align-items:flex-start;
     position: relative;
     z-index: -1;
-    // width: 100%;
+    
     height:80rem;
-    width: 80rem;
+    width: 70rem;
   }
 
   .about-video{
     position: absolute;
     
-    width: 100%;
-    height:90%;
+    // width: 100%;
+    height:80%;
     // display: block;
   }
 

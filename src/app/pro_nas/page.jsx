@@ -17,10 +17,11 @@ export default function page() {
     
     <section className='section-2 container pro-nas'>
     <Breadcrumbs items={breadcrumbItems} />
+    <div className='proNas-flex '>
     <div className='image-box'>
         <img src="/images/imageAbout.png" alt="" className='about-img' />
         </div>  
-    <div className='about-container'>
+    <div className='about-text'>
       <h2 > Vetola — </h2><h3>це простір краси, стилю та натхнення. </h3><br />
       <p className='aboutPage-text'>Ми створили наш магазин із бажанням зробити стильні прикраси доступними кожній дівчині та жінці, яка хоче підкреслити свою індивідуальність. У Vetola ми зібрали колекції, що поєднують елегантність, легкість та сучасні тренди.</p>
 
@@ -30,11 +31,8 @@ export default function page() {
 
 <p className='aboutPage-text'>Долучайтеся до нашої спільноти і дозвольте собі трішки більше блиску щодня!</p>
 
-
-
-
 </div>
-    
+</div>
     <div className='flex-sb about-conditions'>
     
         <ul className='about-category'>
