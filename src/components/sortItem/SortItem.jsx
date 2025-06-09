@@ -1,20 +1,24 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import Card from '../card/Card';
 
 export default function SortItem({items}) {
     const [sortOption, setSortOption] = useState();
-    const [sortedItems, setSortedItems] = useState(items);
 
-    useEffect(() => {
-        const sorted = [...items].sort((a, b) => {
-            if(sortOption === 'lowToHigh') return a.price - b.price;
-            if(sortOption === 'highToLow') return b.price - a.price;
-            return 0;
-        })
-        setSortedItems(sorted)
-    },[sortOption, items]);
+    const sortedItems = useMemo(() => {
+        const sorted = [...items];
+        if (sortOption === "lowToHigh") {
+          sorted.sort((a, b) => a.price - b.price);
+        } else if (sortOption === "highToLow") {
+          sorted.sort((a, b) => b.price - a.price);
+        }
+        return sorted;
+      }, [items, sortOption]);
 
+      const handleSortChange = (e) => {
+        setSortOption(e.target.value);
+      };
+    
     
   return (
     <>
@@ -23,7 +27,7 @@ export default function SortItem({items}) {
         <select 
         value={sortOption} 
         id="sort"
-        onChange={(e) => setSortOption(e.target.value)}
+        onChange={handleSortChange}
         className='sort-list'
         >
             <option value="">Обрати</option>

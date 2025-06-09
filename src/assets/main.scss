@@ -17,18 +17,22 @@
     background: url('/images/hero1.avif') no-repeat;
     background-position: 80% 50%;
     background-size: 42%;
-    padding-bottom: 2rem;
-
     .btn {
         width: 30rem;
     }
     @include isMobile{
       display: flex;
       flex-direction: column;
-      background-position: 50% -2%;
-      background-size: 45%;
-      padding-bottom: 0;
+      background-position: 50% 2%;
+      background-size: 65%;
+      
     }
+}
+
+.main-header{
+  display: flex;
+  justify-content: space-between;
+  
 }
 .name-title{
     display: flex;
@@ -37,7 +41,7 @@
     flex-direction: column;
     gap: 0.5rem;
     width: 50rem;
-    margin-left: 7rem;
+    margin-top: 7rem;
     .h2-hero{
       display: flex;
       align-items: center;
@@ -54,11 +58,15 @@
       flex-direction: column;
       width: 100%;
       margin: 0 auto;
-      padding-top: 13rem;
-    
+      padding-top: 22rem;
+      .h2-hero{
+        font-size: 4.5rem;
+        padding-top: 6rem;
+      }
      
      h3 {
       padding-top: 2rem;
+      
   }
     }
 }
@@ -86,17 +94,17 @@
 
 .social-media{
     display: flex;
-    align-items: end;
+    align-items: flex-end;
     flex-direction: column;
     gap: 2.5rem;
     
     img {
         width: 2.4rem;
-        height: 2.4rem;
-        
-        transition: transform 0.5s ease;
+        height: 2.4rem;       
+        transition: transform 0.3s ease;
+        will-change: transform;
         &:hover{
-      transform: scale(1.5);
+      transform: scale(1.2);
     }
     }
     @include isMobile{
@@ -130,6 +138,8 @@
  }
 
  .card {
+  display: flex;
+  flex-direction: column;
     background-color: white;
     padding: 1rem;
     border-radius: 0.2rem;
@@ -144,13 +154,19 @@
     }
   }
 
-  .new-item-img-container {
-    width: 90%;
+  // .new-item-img-container {
+  //   width: 90%;
+  //   height: 30rem;
+  //   position: relative;
+  //   margin: 1rem auto;
+  //   object-fit: cover;
+  // }
+
+  .card-image{
     height: 30rem;
-    position: relative;
-    margin: 1rem auto;
-    object-fit: cover;
+   
   }
+
   
   .card-title {
     font-size: 2.5rem;
@@ -170,8 +186,16 @@
   }
 
   .aboutUs-main{
-    padding: 0;
+    margin-bottom: 4rem;
     font-size: $font-xl;
+    h2{
+      margin-bottom: 4rem;
+      @include isMobile{
+     
+       text-align:center;
+      }
+    }
+    
   }
 
   .aboutUs{
@@ -183,6 +207,8 @@
     @include isMobile{
       display: flex;
       flex-direction: column;
+      justify-content:center;
+      gap: 3rem;
     }
   }
 
@@ -190,18 +216,17 @@
     display: flex;  
     align-items:flex-start;
     position: relative;
-    z-index: -1;
-    
-    height:80rem;
+    z-index: -1; 
+    height:60rem;
     width: 70rem;
+    @include isMobile{
+      justify-content:center;
+    }
   }
 
   .about-video{
     position: absolute;
-    
-    // width: 100%;
-    height:80%;
-    // display: block;
+    height:100%;
   }
 
     .aboutUs-text{
@@ -210,7 +235,7 @@
       text-align: center;
       width: 80%;
       .btn-1{
-        margin: 5rem auto;
+        margin: 5rem auto 0;
         max-width: 40rem;
       }
     }
@@ -229,6 +254,18 @@
 
     .ul-footer{
       margin-top: 1rem;
+      p{
+        cursor: pointer;
+        &:hover{
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .ul-footer a{
+      &:hover{
+        text-decoration: underline;
+      }
     }
 
     .social-media-footer{
@@ -265,24 +302,54 @@
       
     }
 
-    .form-agreement{
+    .checkbox-wrapper {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
       max-width: 40rem;
       margin-top: 1rem;
-      input[type='checkbox']{
-        width: 1.6rem;
-        height: 1.6rem;
-        accent-color: #000;
-        margin: 0 0.5rem;
+    
+      input[type="checkbox"] {
+        appearance: none;
+        width: 3rem;
+        height: 1.8rem;
+        border: 0.1rem solid #a19c9c;
+        border-radius: 0.1rem;
+        cursor: pointer;
+        position: relative;
+        margin-top: 0.2rem;
+      }
+    
+      input[type="checkbox"]::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.5rem;
+        height: 10px;
+        background-image: url('/icons/checked.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+    
+      input[type="checkbox"]:checked::after {
+        opacity: 1;
+      }
+    
+      label {
+        font-size: 1.5rem;
+        line-height: 1.4;
+        position: relative;
         cursor: pointer;
       }
     }
-    .checkbox-wrapper{
-      margin-top: 2rem;
-    }
+    
 
-    .footer-politice{
-      text-decoration: underline;
-    }
+    
 
     .footer-2{
       padding: 0.8rem 0;

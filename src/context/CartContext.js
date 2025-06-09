@@ -5,6 +5,7 @@ const CartContext = createContext();
 
 export const CartProvider = ({children}) => {
     const [cartItems, setCartItems] = useState([]);
+    const [isCartOpen, setIsCartOpen] = useState(false);
 
     useEffect(() =>{
         const saved = localStorage.getItem('cart');
@@ -28,7 +29,9 @@ export const CartProvider = ({children}) => {
         }else {
             setCartItems((prev) => [...prev, {...product, quantity: 1}])
         }
+        setIsCartOpen(true);
     };
+    const closeCart = () => setIsCartOpen(false);
 
     const removeFromCart = (product) => {
         setCartItems((prev) => {
@@ -51,7 +54,9 @@ export const CartProvider = ({children}) => {
         setCartItems,
         addToCart,
         removeFromCart,
-        deleteItem
+        deleteItem,
+        isCartOpen,
+        closeCart
     };
     return <CartContext.Provider value={value}>{children}</CartContext.Provider>
 }

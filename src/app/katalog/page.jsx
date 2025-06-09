@@ -53,11 +53,9 @@ export default async function CatalogPage() {
             <Link href={`/katalog/${category}`}>
               <h2 className="">{categoryNameUkr}</h2>
             </Link>
-            {/* <div className='catalog-card'> */}
-            <div className="container-card-category">
+         
             <CatalogSlider items={filteredItems} />
-            </div>
-            {/* </div> */}
+          
             <div className="btn-category">
               <Link href={`/katalog/${category}`}>
                 <button className="btn-2 ">Дивитись більше</button>

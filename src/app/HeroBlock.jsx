@@ -32,9 +32,19 @@ export default function HeroBlock() {
       <Modal title="Купівля товару" text="Оформіть покупку прямо зараз. Ми з вами зв'яжемося." isOpen={activeModal === 'buy'} onClose={() => setActiveModal(null)} />
 
     </div>
-    <section className="hero-section section-2">
+    <section className="hero-section ">
       <div className="container">
+        <div className="main-header">
+        
 
+        <div className="name-title">
+          <h2 className="h2-hero">  Вишукані прикраси для натхнення та краси </h2> 
+          <h3>Твій стиль починається тут</h3>
+        
+        
+        <Link href="/katalog" className="btn-1 "> Дивитися асортимент</Link>
+        <button className="btn-3 btn-consult" onClick={() => setActiveModal('consult')}>Замовити консультацію</button>
+        </div>
         <nav>
           <ul className="social-media">
             {socials.map(({ href, icon, alt }) => (
@@ -46,14 +56,6 @@ export default function HeroBlock() {
             ))}
           </ul>
         </nav>
-
-        <div className="name-title">
-          <h2 className="h2-hero"> Ідеальне доповнення до твого образу </h2> 
-          <h3>Твій стиль починається тут</h3>
-        
-        
-        <Link href="/katalog" className="btn-1 "> Дивитися асортимент</Link>
-        <button className="btn-3 btn-consult" onClick={() => setActiveModal('consult')}>Замовити консультацію</button>
         </div>
       </div>
      

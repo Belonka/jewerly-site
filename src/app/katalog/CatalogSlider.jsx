@@ -51,11 +51,13 @@ export default function CatalogSlider({ items }) {
         }}
       >
        
-          <SwiperSlide >
+        
           {items.map((item) => (
+              <SwiperSlide >
             <Card key={item.id} item={item} />
+            </SwiperSlide>
              ))}
-          </SwiperSlide>
+     
        
       </Swiper>
     </div>

@@ -2,7 +2,7 @@
 import Link from 'next/link'
 export default function AboutUs() {
   return (
-    <section className="aboutUs-main container section-2">
+    <section className="aboutUs-main container ">
       <h2>Про нас</h2>
     <div className=" aboutUs">
       

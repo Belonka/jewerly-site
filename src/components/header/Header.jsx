@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Modal from '@/components//modals/Modal';
 
 const navItems = [
   { href: "/katalog", label: "Каталог" },
@@ -14,6 +15,7 @@ const navItems = [
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeModal, setActiveModal] = useState(null);
 
   const menuToggle = () => {
     setMenuOpen(prev => !prev)
@@ -34,14 +36,18 @@ export default function Header() {
   ];
 
   return (
+    <>
+    <div>
+      <Modal title="Замовити консультацію" text="Заповніть форму і ми з вами зв'яжемося в робочий час." isOpen={activeModal === 'consult'} onClose={() => setActiveModal(null)}/>
+    </div>
     <header className={`header flex-cl container ${menuOpen ? "menu-active" : ""}`}>
       <div className="header-top flex-sb">
         <h1>
           <Link href="/">VETOLA</Link>
         </h1>
         <div className="header-contact flex-sb">
-          <a href="tel:+14203659">+380 95 819 80 65</a>
-          <button className="btn-2">Зв'язатись з нами</button>
+          <a href="tel:+380958198065">+380 95 819 80 65</a>
+          <button className="btn-2" onClick={() => setActiveModal('consult')}>Зв'язатись з нами</button>
 
         
         <nav>
@@ -76,5 +82,6 @@ export default function Header() {
         </nav>
       </div>
     </header>
+    </>
   );
 }

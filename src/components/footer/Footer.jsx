@@ -74,7 +74,7 @@ export default function Footer() {
         
         <div className='checkbox-wrapper'>
         <input type="checkbox" id='subscribe' name='subscribe'required/>
-        <label htmlFor="subscribe">Я бажаю отримувати на електронну поштову скриньку найсвіжіші новини  та погоджуюся з <Link className='footer-politice' href='/polityka_pryvatnosti'>Політикою конфіденційності.</Link></label> 
+        <label htmlFor="subscribe">Я бажаю отримувати на електронну поштову скриньку найсвіжіші новини  та погоджуюся з <Link  href='/polityka_pryvatnosti'>Політикою конфіденційності.</Link></label> 
         </div>
         </form>
         </div>
