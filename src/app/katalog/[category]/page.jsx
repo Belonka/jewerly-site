@@ -1,8 +1,6 @@
 
 import { getJewelryData } from "@/lib/getJewelryData";
-import Link from "next/link";
 import Breadcrumbs from '@/components/breadcrumbs/BreadCrumbs';
-import Card from "@/components/card/Card";
 import SortItem from "@/components/sortItem/SortItem";
 
 

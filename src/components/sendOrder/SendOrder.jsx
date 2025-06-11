@@ -17,7 +17,7 @@ const handleSendOrder = async() => {
         items: cartItems,
         total: totalAmount
     }
-    console.log("Отправляем данные заказа:", orderData);
+    
     try{
         const response = await fetch('/api/send-order', {
             method: 'POST',

@@ -18,27 +18,11 @@ export default function ShoppingCartPage(){
         <h2>Корзина</h2>
         <CartContent
         className='shopping-Cart'
-        />
-         {/* {cartItems.length ===0 ? (
-            <p> Ваша корзина порожня  </p>
-         ) : (
-            cartItems.map((item) => (
-                
-                <CartItem key={item.id} 
-                item={item} 
-                />              
-            ))
-         )}
-         <div className='summary-cart'>
-            <div className='sum-amount'>
-         <p className='p-bold'>Всього: </p><p><strong>{totalAmount.toFixed(2)} грн</strong></p>
-         </div> */}
+        />        
          <div className='btn-sum'>
          <button className='btn-3 btn-clean'>Очистити корзину</button>
-          <SendOrderButton className='btn-2'/>
-          
+          <SendOrderButton className='btn-2'/>         
           </div>
-        {/* </div> */}
         </section>
     )
 }

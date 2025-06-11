@@ -23,11 +23,13 @@ const socials = [
 export default function HeroBlock() {
   const [activeModal, setActiveModal] = useState(null);
 
+const modalTypeConsult = activeModal === 'consult';
+
   return (
     <>
     <div>
       
-      <Modal title="Замовити консультацію" text="Заповніть форму і ми з вами зв'яжемося в робочий час." isOpen={activeModal === 'consult'} onClose={() => setActiveModal(null)}/>
+      <Modal title="Замовити консультацію" text="Заповніть форму і ми з вами зв'яжемося в робочий час." isOpen={modalTypeConsult} onClose={() => setActiveModal(null)}/>
 
       <Modal title="Купівля товару" text="Оформіть покупку прямо зараз. Ми з вами зв'яжемося." isOpen={activeModal === 'buy'} onClose={() => setActiveModal(null)} />
 

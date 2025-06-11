@@ -17,7 +17,7 @@ export async function POST(req) {
         .map(item => `${item.name} x ${item.quantity} - ${item.price}грн`)
         .join('\n')
 
-        const message = ` Нове замовлення : ${name} Телефон: ${phone}Товары:${itemList} Сумма: *${total} грн*`;
+        const message = ` Нове замовлення : ${name}\n Телефон: ${phone} \nТовары:${itemList} \nСумма: *${total} грн*`;
 
         const telegramRes = await fetch(`https://api.telegram.org/bot${token}/sendMessage`,{
             

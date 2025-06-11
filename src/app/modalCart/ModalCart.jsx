@@ -9,7 +9,6 @@ export default function ModalCart() {
     
     const { isCartOpen, closeCart} = useCart()
     if(!isCartOpen) return null
-    console.log("isCartOpen:", isCartOpen)
 
   return (
     <div className='modal-shoppingCart'>

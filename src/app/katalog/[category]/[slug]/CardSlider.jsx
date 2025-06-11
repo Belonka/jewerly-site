@@ -16,7 +16,7 @@ export default function CardSlider({ images }) {
         style={{
           '--swiper-navigation-color': '#000',
         }}
-        spaceBetween={10}
+        spaceBetween={30}
         navigation={true}
         thumbs={{ swiper: thumbsSwiper }}
         modules={[FreeMode, Navigation, Thumbs]}

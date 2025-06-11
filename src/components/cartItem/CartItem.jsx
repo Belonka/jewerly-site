@@ -8,6 +8,7 @@ export default function CartItem({item}) {
     const {addToCart, removeFromCart, deleteItem} = useCart();
 
     const total = Number(item.price) * item.quantity;
+    const totalAmount = total.toFixed(2);
   return (
      <>
     <div className='cart-item'>
@@ -31,7 +32,7 @@ export default function CartItem({item}) {
         
         
         <div className='cart-item-price'>
-        <strong><p className='p-bold'>{total.toFixed(2)}</p></strong> <p>грн</p>
+        <strong><p className='p-bold'>{totalAmount}</p></strong> <p>грн</p>
         </div>
         </div>
         

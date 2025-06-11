@@ -6,7 +6,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import Link from "next/link";
 import Card from "@/components/card/Card";
 
 export default function CatalogSlider({ items }) {

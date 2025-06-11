@@ -1,13 +1,17 @@
 'use client'
 import Link from 'next/link'
 import Modal from '../modals/Modal';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 
 export default function Footer() {
-  const year = new Date().getFullYear();
   const [activeModal, setActiveModal] = useState(null);
+  const [year, setYear] = useState("")
 
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
+ 
 
   const navItems = [
     { href: "/pro_nas", label: "Про нас" },
@@ -48,9 +52,9 @@ export default function Footer() {
         <p className='p-bold'>Зворотній зв'язок</p>
         
         <ul className='flex-cl ul-footer'>
-        <a href="tel:+">+380 95 819 80 65</a>
+      <li><a href="tel:+">+380 95 819 80 65</a>
         <p onClick={() => setActiveModal('consult')}> Передзвонити Вам?</p>
-        <Modal/>
+        <Modal/></li>
         </ul>
         <ul className="social-media-footer">
                     {socials.map(({ href, icon, alt }) => (
