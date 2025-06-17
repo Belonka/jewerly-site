@@ -245,6 +245,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
       font-size: $font-s;
+      padding: 4rem 0;
       border-top: 0.2rem solid #ccc;
       @include isMobile {
         flex-direction: column;
@@ -263,9 +264,14 @@
     }
 
     .ul-footer a{
+      
       &:hover{
         text-decoration: underline;
       }
+    }
+
+    .ul-footer p{
+      padding-top: 1rem;
     }
 
     .social-media-footer{
@@ -285,74 +291,88 @@
       font-weight: 700;
     }
 
-    .form-footer{
-      input{
-        border: 0.2rem solid #ccc;
-        width: 28rem;
-        margin-right: 1rem;
+    .header-bottom.footer-style ul{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding-right: 0.2rem;
+      a{
+        transition: transform 0.3s ease-out;
+            &:hover {
+                transform: (1.05);
+                text-decoration: underline;
+            }
       }
-      button{
-        width: 9.5rem;
-        background-color: $accent-color;
-        &:hover {
-          background-color: $title-text;
-    color: #0a0908;;
-        }
-      }
-      
     }
 
-    .checkbox-wrapper {
-      position: relative;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      max-width: 40rem;
-      margin-top: 1rem;
+    // .form-footer{
+    //   input{
+    //     border: 0.2rem solid #ccc;
+    //     width: 28rem;
+    //     margin-right: 1rem;
+    //   }
+    //   button{
+    //     width: 9.5rem;
+    //     background-color: $accent-color;
+    //     &:hover {
+    //       background-color: $title-text;
+    // color: #0a0908;;
+    //     }
+    //   }
+      
+    // }
+
+    // .checkbox-wrapper {
+    //   position: relative;
+    //   display: flex;
+    //   align-items: flex-start;
+    //   gap: 0.5rem;
+    //   max-width: 40rem;
+    //   margin-top: 1rem;
     
-      input[type="checkbox"] {
-        appearance: none;
-        width: 3rem;
-        height: 1.8rem;
-        border: 0.1rem solid #a19c9c;
-        border-radius: 0.1rem;
-        cursor: pointer;
-        position: relative;
-        margin-top: 0.2rem;
-      }
+    //   input[type="checkbox"] {
+    //     appearance: none;
+    //     width: 3rem;
+    //     height: 1.8rem;
+    //     border: 0.1rem solid #a19c9c;
+    //     border-radius: 0.1rem;
+    //     cursor: pointer;
+    //     position: relative;
+    //     margin-top: 0.2rem;
+    //   }
     
-      input[type="checkbox"]::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 1.5rem;
-        height: 10px;
-        background-image: url('/icons/checked.png');
-        background-size: contain;
-        background-repeat: no-repeat;
-        opacity: 0;
-        transition: opacity 0.2s;
-      }
+    //   input[type="checkbox"]::after {
+    //     content: '';
+    //     display: block;
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     width: 1.5rem;
+    //     height: 10px;
+    //     background-image: url('/icons/checked.png');
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     opacity: 0;
+    //     transition: opacity 0.2s;
+    //   }
     
-      input[type="checkbox"]:checked::after {
-        opacity: 1;
-      }
+    //   input[type="checkbox"]:checked::after {
+    //     opacity: 1;
+    //   }
     
-      label {
-        font-size: 1.5rem;
-        line-height: 1.4;
-        position: relative;
-        cursor: pointer;
-      }
-    }
+    //   label {
+    //     font-size: 1.5rem;
+    //     line-height: 1.4;
+    //     position: relative;
+    //     cursor: pointer;
+    //   }
+    // }
     
 
     
 
     .footer-2{
-      padding: 0.8rem 0;
+      padding: .8rem 0;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;

@@ -3,19 +3,23 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Modal from '@/components//modals/Modal';
+import HeaderBottom from "./HeaderBottom";
 
-const navItems = [
-  { href: "/katalog", label: "Каталог" },
-  { href: "/katalog/nabory", label: "Набори" },
-  { href: "/katalog/braslety", label: "Браслети" },
-  { href: "/katalog/kabluchky", label: "Кільця" },
-  { href: "/katalog/lantsiuzhky", label: "Ланцюжки" },
-  { href: "/#contacts", label: "Контакти" },
-];
+// const navItems = [
+//   { href: "/katalog", label: "Каталог" },
+//   { href: "/katalog/nabory", label: "Набори" },
+//   { href: "/katalog/braslety", label: "Браслети" },
+//   { href: "/katalog/kabluchky", label: "Кільця" },
+//   { href: "/katalog/lantsiuzhky", label: "Ланцюжки" },
+//   { href: "/#contacts", label: "Контакти" },
+// ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeModal, setActiveModal] = useState(null);
+
+  const isConsultModalOpen = activeModal === 'consult';
+  const handleCloseModal = () => setActiveModal(null);
 
   const menuToggle = () => {
     setMenuOpen(prev => !prev)
@@ -38,7 +42,10 @@ export default function Header() {
   return (
     <>
     <div>
-      <Modal title="Замовити консультацію" text="Заповніть форму і ми з вами зв'яжемося в робочий час." isOpen={activeModal === 'consult'} onClose={() => setActiveModal(null)}/>
+      <Modal title="Замовити консультацію" 
+            text="Заповніть форму і ми з вами зв'яжемося в робочий час." 
+            isOpen={isConsultModalOpen} 
+            onClose={handleCloseModal}/>
     </div>
     <header className={`header flex-cl container ${menuOpen ? "menu-active" : ""}`}>
       <div className="header-top flex-sb">
@@ -70,7 +77,8 @@ export default function Header() {
                         </div>
                     </div>
       </div>
-      <div className="header-bottom">
+      <HeaderBottom variant="header-style"/>
+      {/* <div className="header-bottom">
       <nav>
           <ul>
             {navItems.map(({ href, label }) => (
@@ -80,7 +88,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-      </div>
+      </div> */}
     </header>
     </>
   );

@@ -59,8 +59,8 @@
   right: -5%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 60rem;
-  max-height: 80rem;
+  max-width: 50rem;
+  max-height: 60rem;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -106,6 +106,7 @@
   height: 50px;
   object-fit: cover;
   margin-right: 1rem;
+  
   }
 
   .modal-Cart .cart-item{
@@ -116,7 +117,7 @@
     padding: 0.8rem 0;
     border-bottom: 1px solid #eee;
     h3{
-      font-size: 3rem;
+      font-size: 2.2rem;
     }
   }
     .modal-Cart .cart-item-info{

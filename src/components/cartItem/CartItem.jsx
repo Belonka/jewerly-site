@@ -9,6 +9,16 @@ export default function CartItem({item}) {
 
     const total = Number(item.price) * item.quantity;
     const totalAmount = total.toFixed(2);
+    const quantityControls = (
+      <div className='quantity-controls'>
+                <div className='quantity-change'>
+                <button onClick={() => removeFromCart(item)} className='btn-plus-min'>-</button>
+                <span>{item.quantity}</span>
+                <button onClick={() => addToCart(item)} className='btn-plus-min'>+</button>
+                </div>
+                <button onClick={() => deleteItem(item)} className='btn-deleteCart'>Видалити</button>
+                </div>
+    )
   return (
      <>
     <div className='cart-item'>
@@ -20,15 +30,8 @@ export default function CartItem({item}) {
         </div>
         </Link>
         <div className='cart-item-info'>
-            
-            <div className='quantity-controls'>
-                <div className='quantity-change'>
-                <button onClick={() => removeFromCart(item)} className='btn-plus-min'>-</button>
-                <span>{item.quantity}</span>
-                <button onClick={() => addToCart(item)} className='btn-plus-min'>+</button>
-                </div>
-                <button onClick={() => deleteItem(item)} className='btn-deleteCart'>Видалити</button>
-                </div>
+            {quantityControls}
+  
         
         
         <div className='cart-item-price'>

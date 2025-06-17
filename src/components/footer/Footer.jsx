@@ -2,7 +2,10 @@
 import Link from 'next/link'
 import Modal from '../modals/Modal';
 import React, { useState, useEffect } from 'react';
-import Image from "next/image";
+import SocialItems from "@/components/socialItems/SocialItems";
+import HeaderBottom, { navItems }  from "@/components/header/HeaderBottom";
+
+const footerItems = navItems.slice(0, -1);
 
 export default function Footer() {
   const [activeModal, setActiveModal] = useState(null);
@@ -11,37 +14,27 @@ export default function Footer() {
   useEffect(() => {
     setYear(new Date().getFullYear());
   }, []);
+
+  
  
 
-  const navItems = [
+  const navItemsInfo = [
     { href: "/pro_nas", label: "Про нас" },
     { href: "/oplata_i_dostavka", label: "Оплата і доставка" },
     { href: "/obmin_ta_povernennia", label: "Обмін і повернення" },
-    { href: "/#contacts", label: "Контакти" },
+    { href: "/kontakty", label: "Контакти" },
   ];
 
-  const socials = [
-    {
-      href: "https://instagram.com/vetola.jewellery",
-      icon: "/icons/instagram2.svg",
-      alt: "Instagram",
-    },
-    { href: "tel:+380XXXXXXXXX", icon: "/icons/phone.svg", alt: "" },
-    {
-      href: "https://t.me/yourTelegram",
-      icon: "/icons/telegram.svg",
-      alt: "Telegram",
-    },
-  ];
-
+  
+  
   return (
     <footer>
       <Modal title="Замовити консультацію" text="Заповніть форму і ми з вами зв'яжемося в робочий час." isOpen={activeModal === 'consult'} onClose={() => setActiveModal(null)}/>
-    <section className='footer-main container section-2'>
+    <section className='footer-main container '>
         <nav >
         <p className='p-bold'>Клієнтам</p>
         <ul className='flex-cl ul-footer'>
-        {navItems.map(({ href, label }) => (
+        {navItemsInfo.map(({ href, label }) => (
               <li key={href}>
                 <Link href={href}>{label}</Link>
               </li>
@@ -52,36 +45,19 @@ export default function Footer() {
         <p className='p-bold'>Зворотній зв'язок</p>
         
         <ul className='flex-cl ul-footer'>
-      <li><a href="tel:+">+380 95 819 80 65</a>
+      <li><a href="tel:+380 95 819 80 65">+380 95 819 80 65</a>
         <p onClick={() => setActiveModal('consult')}> Передзвонити Вам?</p>
         <Modal/></li>
         </ul>
-        <ul className="social-media-footer">
-                    {socials.map(({ href, icon, alt }) => (
-                      <li key={href}>
-                        <a href={href} target="_blank" aria-label={alt}>
-                          <Image src={icon} alt={alt} width={24} height={24} priority />
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-        
+        <SocialItems className="social-media-footer"/>       
         </nav>
-        
-        <div className='form-footer'>
-        <p className='p-bold'>Розсилка</p>
-            <p>Будьте в курсі наших акцій і новинок</p>
-        <form action="" className='form-agreement'>
-            <input type="email" placeholder='Email'/>
-            <button type='submit btn' className=''>Надіслати</button>
-            
-        
-        <div className='checkbox-wrapper'>
-        <input type="checkbox" id='subscribe' name='subscribe'required/>
-        <label htmlFor="subscribe">Я бажаю отримувати на електронну поштову скриньку найсвіжіші новини  та погоджуюся з <Link  href='/polityka_pryvatnosti'>Політикою конфіденційності.</Link></label> 
-        </div>
-        </form>
-        </div>
+        <HeaderBottom 
+          items={footerItems}
+          variant="footer-style" 
+          className='footer-catalog'
+          firstItemClass="p-bold" 
+        />
+       
         
     </section>
     <div className='footer-2 container section-2'>

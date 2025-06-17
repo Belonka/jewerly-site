@@ -14,7 +14,7 @@ export default function Button({item}) {
   }
   return (
     <div>
-      <button onClick={handleClick} className="btn btn-buy">Купити</button>
+      <button onClick={handleClick} className="btn-2 btn-buy">Купити</button>
 
       {isModalOpen && (
         <ModalCart onClose={() => setIsModalOpen(false) } />

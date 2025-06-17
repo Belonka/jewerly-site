@@ -47,12 +47,6 @@ export default async function CategoryPage({ params }) {
       <Breadcrumbs items={breadcrumbItems} />
       <h2 className="">{items[0].categoryUkr}</h2>
       <SortItem items={items} />
-    
-      {/* <ul className="container-card-category">
-        {items.map((item) => (
-                   <Card key={item.id} item={item} />
-                    ))}
-      </ul> */}
     </section>
   );
 }

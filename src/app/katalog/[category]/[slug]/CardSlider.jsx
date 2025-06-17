@@ -32,7 +32,7 @@ export default function CardSlider({ images }) {
       <Swiper
         onSwiper={setThumbsSwiper}
         spaceBetween={30}
-        slidesPerView={4}
+        slidesPerView={5}
         freeMode={true}
         watchSlidesProgress={true}
         modules={[FreeMode, Navigation, Thumbs]}

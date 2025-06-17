@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+
 import ModalTextContent from './ModalTextContent';
 
 export default function Modal({ isOpen, onClose, title, text }) {

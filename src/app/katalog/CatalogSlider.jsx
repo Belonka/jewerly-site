@@ -27,8 +27,8 @@ export default function CatalogSlider({ items }) {
     </div>
       <Swiper
         modules={[Navigation]}
-        slidesPerView={3}
-        spaceBetween={8}
+        slidesPerView={4}
+        spaceBetween={5}
         navigation={{
           "clickable": true,
           nextEl: '.custom-next',
@@ -45,15 +45,15 @@ export default function CatalogSlider({ items }) {
           },
           1024: {
             slidesPerView: 3,
-            spaceBetween: 30,
+            spaceBetween: 10,
           },
         }}
       >
        
         
           {items.map((item) => (
-              <SwiperSlide >
-            <Card key={item.id} item={item} />
+              <SwiperSlide key={item.id}>
+            <Card  item={item} />
             </SwiperSlide>
              ))}
      

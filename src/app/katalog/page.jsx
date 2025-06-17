@@ -40,7 +40,7 @@ export default async function CatalogPage() {
     },
   ];
   return (
-    <section className="container section-2">
+    <section className="container ">
       <Breadcrumbs items={breadcrumbItems} />
       {categories.map((category) => {
         const filteredItems = data.filter(

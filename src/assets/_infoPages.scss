@@ -1,17 +1,7 @@
 @use "variables" as *;
 @use "base" as *;
 
-// .about-section{
-//     font-size: $font-l;
-//     padding-bottom: 2rem;
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
 
-//     p{
-//         font-size: $font-m;
-//     }
-// }
 
 .proNas-flex{
     display: flex;
@@ -108,4 +98,35 @@
   .classic-list{
     list-style-type: disc;
     padding-left: 4rem;
+  }
+
+  .kontakty-section{
+    background: url('/images/img-kontakty.avif') no-repeat;
+    background-position: 80% 30%;
+    background-size: 20%;
+    padding: 4rem 0;
+  }
+
+  .social-kontakty{
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 0 18rem;
+    gap: 3rem;
+    li{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 3rem;
+    }
+  }
+
+  .info-title{
+   padding-top: 4rem;
+  }
+
+  .socialTitle-Link{
+    font-size: $font-m;
+    &:hover{
+        text-decoration: underline;
+    }
   }
