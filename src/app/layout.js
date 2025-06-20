@@ -3,7 +3,7 @@ import "@/assets/main.scss";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import { CartProvider } from "@/context/CartContext";
-import ModalCart from "@/app/modalCart/ModalCart";
+// import ModalCart from "@/app/modalCart/ModalCart";
 
 const openSans =  Open_Sans({
   variable: "--font-open-sans",
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
       <body className={`${openSans.variable} ${cormorantGaramondMono.variable}`}>
       <CartProvider>
         <Header />
-        <ModalCart /> 
+        {/* <ModalCart />  */}
         <main>
         {children}
         </main>

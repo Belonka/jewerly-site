@@ -6,7 +6,7 @@ import CartContent from '@/components/cartContent/CartContent';
 
 export default function ShoppingCartPage(){
    
-
+    const { clearCart } = useCart();
     return(
         <section className='section-2 container'>
         <h2>Корзина</h2>
@@ -14,7 +14,7 @@ export default function ShoppingCartPage(){
         className='shopping-Cart'
         />        
          <div className='btn-sum'>
-         <button className='btn-3 btn-clean'>Очистити корзину</button>
+         <button onClick={clearCart}  className='btn-3 btn-clean'>Очистити корзину</button>
           <SendOrderButton className='btn-2'/>         
           </div>
         </section>

@@ -1,22 +1,19 @@
 "use client" 
 import { useState } from "react";
+import { useCart } from '@/context/CartContext';
 import Link from "next/link";
 import Image from "next/image";
 import Modal from '@/components//modals/Modal';
 import HeaderBottom from "./HeaderBottom";
 
-// const navItems = [
-//   { href: "/katalog", label: "Каталог" },
-//   { href: "/katalog/nabory", label: "Набори" },
-//   { href: "/katalog/braslety", label: "Браслети" },
-//   { href: "/katalog/kabluchky", label: "Кільця" },
-//   { href: "/katalog/lantsiuzhky", label: "Ланцюжки" },
-//   { href: "/#contacts", label: "Контакти" },
-// ];
+
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeModal, setActiveModal] = useState(null);
+  const { cartItems } = useCart();
+
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   const isConsultModalOpen = activeModal === 'consult';
   const handleCloseModal = () => setActiveModal(null);
@@ -60,9 +57,12 @@ export default function Header() {
         <nav>
                   <ul className="private-room">
                     {privateRoom.map(({ href, icon, alt }) => (
-                      <li key={href}>
+                      <li key={href} className="cart-icon-wrapper">
                         <Link href={href}  aria-label={alt}>
                           <Image src={icon} alt={alt} width={24} height={24} priority />
+                          {alt === "Cart" && cartCount > 0 && (
+                         <span className="cart-count">{cartCount}</span>
+                         )}
                         </Link>
                       </li>
                     ))}
@@ -77,18 +77,10 @@ export default function Header() {
                         </div>
                     </div>
       </div>
-      <HeaderBottom variant="header-style"/>
-      {/* <div className="header-bottom">
-      <nav>
-          <ul>
-            {navItems.map(({ href, label }) => (
-              <li key={href}>
-                <Link href={href}>{label}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div> */}
+      <HeaderBottom 
+      variant="header-style"
+      closeMenu={() => setMenuOpen(false)}/>
+      
     </header>
     </>
   );

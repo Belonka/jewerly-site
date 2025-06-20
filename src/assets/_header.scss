@@ -52,6 +52,25 @@
       transform: scale(1.2);
     }
     }
+
+    .cart-icon-wrapper {
+      position: relative;
+    }
+    
+    .cart-count {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      background-color:$accent-color;
+      color: $bg-color-3;
+      font-size: 1.8rem;
+      padding: 0.1rem 0.5rem;
+      border: 0.2rem solid $bg-color-3;
+      border-radius: 0.2rem;
+      line-height: 1;
+      font-weight: bold;
+      text-align: center;
+    }
     
     .header-bottom {
       margin-bottom: 1rem;

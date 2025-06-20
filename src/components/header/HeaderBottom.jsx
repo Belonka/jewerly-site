@@ -9,7 +9,7 @@ export const navItems = [
     { href: "/kontakty", label: "Контакти" },
   ];
 
-export default function HeaderBottom({ items = navItems , variant, className, firstItemClass }) {
+export default function HeaderBottom({ items = navItems , variant, className, firstItemClass, closeMenu }) {
     
 
       const fullClassName = `header-bottom ${variant} ${className}`.trim();
@@ -21,7 +21,7 @@ export default function HeaderBottom({ items = navItems , variant, className, fi
             {items.map(({ href, label }, index) => (
               <li key={href} className={index === 0 ? firstItemClass : undefined}>
                 
-                <Link href={href}>{label}</Link>
+                <Link href={href} onClick={closeMenu}>{label}</Link>
               </li>
             ))}
           </ul>

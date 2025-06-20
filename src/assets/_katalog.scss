@@ -20,7 +20,9 @@
         margin: 2rem auto;
     }
     @include isMobile{
-        width: 42rem;
+        max-width: 42rem;
+        display: flex;
+       flex-direction: column;
     }
 }
 

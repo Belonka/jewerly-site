@@ -41,6 +41,12 @@ export default function Footer() {
                ))}
               </ul>
         </nav>
+        <HeaderBottom 
+          items={footerItems}
+          variant="footer-style" 
+          className='footer-catalog'
+          firstItemClass="p-bold" 
+        />
         <nav>
         <p className='p-bold'>Зворотній зв'язок</p>
         
@@ -51,12 +57,7 @@ export default function Footer() {
         </ul>
         <SocialItems className="social-media-footer"/>       
         </nav>
-        <HeaderBottom 
-          items={footerItems}
-          variant="footer-style" 
-          className='footer-catalog'
-          firstItemClass="p-bold" 
-        />
+       
        
         
     </section>
