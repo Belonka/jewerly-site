@@ -59,14 +59,17 @@
     
     .cart-count {
       position: absolute;
+      width: 2.3rem;
+      height: 2.3rem;
       top: -12px;
-      right: -12px;
+      right: 2px;
       background-color:$accent-color;
       color: $bg-color-3;
       font-size: 1.8rem;
-      padding: 0.1rem 0.5rem;
+      transform: rotate(-45deg);
+      // padding: 0rem 0.2rem;
       border: 0.2rem solid $bg-color-3;
-      border-radius: 0.2rem;
+      border-radius: 0.1rem;
       line-height: 1;
       font-weight: bold;
       text-align: center;
