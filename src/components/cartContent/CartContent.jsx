@@ -29,7 +29,10 @@ export default function CartContent({ className }) {
                )}
                <div className='summary-cart'>
                   <div className='sum-amount'>
-               <p className='p-bold'>Всього: </p><p><strong>{totalAmount} грн</strong></p>
+               <p className='p-bold'>Всього: </p>
+               <div>
+               <p><strong>{totalAmount} грн</strong></p>
+               </div>
                </div>
                </div>
     </div>

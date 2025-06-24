@@ -10,15 +10,23 @@
     .header-top {
         margin-top: 3rem;
         align-items: center;
+       
    
         .header-contact{
             gap: 3rem;
             align-items: center;
-            @include isMobile{
-                display: none;
-            }
+            text-align: center;
+            
         }
-
+          .header-contact-info{
+            display: flex;
+            flex-direction: row;
+            gap: 3rem;
+            align-items: center;
+            @include isMobile{
+              display: none;
+          }
+          }
         
         h1 {
             font-weight: bold;
@@ -34,7 +42,16 @@
               text-decoration: underline;
           }
         }
+    }
+
+    .profile-cart{
+      
+      @include isMobile{
+        margin-left: 11rem;
+        align-items:center;
+        text-align: center;
         
+      }
     }
 
     .private-room{
@@ -43,7 +60,7 @@
       flex-direction: row;
       gap: 3rem;
       align-items: center;
-      
+      text-align: center;
     }
 
     .private-room img{
@@ -51,6 +68,7 @@
         &:hover{
       transform: scale(1.2);
     }
+    
     }
 
     .cart-icon-wrapper {
@@ -61,18 +79,22 @@
       position: absolute;
       width: 2.3rem;
       height: 2.3rem;
-      top: -12px;
-      right: 2px;
+      top: -1.4rem;
+      right: .4rem;
       background-color:$accent-color;
       color: $bg-color-3;
       font-size: 1.8rem;
       transform: rotate(-45deg);
       // padding: 0rem 0.2rem;
-      border: 0.2rem solid $bg-color-3;
-      border-radius: 0.1rem;
+      border: 1.6px solid $bg-color-3;// в rem не получается подобрать правильный размер
+      border-radius: 0.5rem;
       line-height: 1;
       font-weight: bold;
       text-align: center;
+      @include isMobile{
+        top: -1.4rem;
+        right: 0.1rem;
+      }
     }
     
     .header-bottom {

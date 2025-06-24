@@ -50,11 +50,12 @@ export default function Header() {
           <Link href="/">VETOLA</Link>
         </h1>
         <div className="header-contact flex-sb">
+          <div className="header-contact-info">
           <a href="tel:+380958198065">+380 95 819 80 65</a>
           <button className="btn-2" onClick={() => setActiveModal('consult')}>Зв'язатись з нами</button>
-
+          </div>
         
-        <nav>
+        <nav className="profile-cart">
                   <ul className="private-room">
                     {privateRoom.map(({ href, icon, alt }) => (
                       <li key={href} className="cart-icon-wrapper">

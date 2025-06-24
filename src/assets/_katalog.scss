@@ -9,7 +9,11 @@
 
 .section-category{
     align-items: flex-start;
-    
+    margin-left: 2rem;
+    @include isMobile{
+        margin: 0 auto;
+
+    }
 }
 
 .category-section{
@@ -51,8 +55,8 @@
 .container-card-category{
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
-    margin: 0 .3rem;
+    gap: 3rem;
+    margin: 0 .5rem;
     justify-content: start;
     // flex-direction: row;
 }
@@ -126,6 +130,7 @@
 
 .btn-buy{
     margin: 2rem auto;
-    padding: 0.5rem 1.5rem;
+    padding: 1rem 2.5rem;
+    font-size: $font-m;
 }
     

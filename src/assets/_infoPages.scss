@@ -67,7 +67,7 @@
     font-size:$font-m ;
     // max-width: 45rem;
     // border-radius: 0.2rem;
-    // box-shadow: 0.03rem 0.04rem 0.2rem 0.2rem rgba(0,0,0,0.1);
+    // box-shadow: .03rem .04rem .2rem .2rem rgba(0,0,0,0.1);
     li{
         margin: 1rem auto;
     }
@@ -101,9 +101,7 @@
   }
 
   .kontakty-section{
-    background: url('/images/img-kontakty.avif') no-repeat;
-    background-position: 80% 30%;
-    background-size: 30%;
+    background: url('/images/img-kontakty.avif') 80% 30%/30% no-repeat;
     padding: 4rem 0;
     @include isMobile{
       display: flex;

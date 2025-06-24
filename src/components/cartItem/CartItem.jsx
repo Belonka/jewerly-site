@@ -18,6 +18,18 @@ export default function CartItem({item}) {
                 </div>
                 <button onClick={() => deleteItem(item)} className='btn-deleteCart'>Видалити</button>
                 </div>
+                
+    )
+    const quantityControlsMobile = (
+      <div className='quantity-controls-mobile'>
+                <div className='quantity-change-mobile'>
+                <button onClick={() => removeFromCart(item)} className='btn-plus-min-mobile'>-</button>
+                <span>{item.quantity}</span>
+                <button onClick={() => addToCart(item)} className='btn-plus-min-mobile'>+</button>
+                </div>
+                <button onClick={() => deleteItem(item)} className='btn-deleteCart-mobile'>Видалити</button>
+                </div>
+                
     )
   return (
      <>
@@ -26,7 +38,9 @@ export default function CartItem({item}) {
         <div className='cart-name-image'>
         <Image src={item.images[0]} alt={item.name} width={80} height={80} />
         <h3>{item.name}</h3>
-        
+        <div className='cart-item-quantity-mobile'>
+        {quantityControlsMobile}
+        </div>
         </div>
         </Link>
         <div className='cart-item-info'>
@@ -37,6 +51,7 @@ export default function CartItem({item}) {
         <div className='cart-item-price'>
         <strong><p className='p-bold'>{totalAmount}</p></strong> <p>грн</p>
         </div>
+        
         </div>
         
     </div>
