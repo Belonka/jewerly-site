@@ -30,6 +30,7 @@
 }
 
 .main-header{
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   
@@ -117,6 +118,7 @@
 }
 
 .new-items{
+  // margin-top: 1rem;
   @include isMobile{
     padding: 1rem auto;
   }

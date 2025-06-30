@@ -79,21 +79,24 @@
       position: absolute;
       width: 2.3rem;
       height: 2.3rem;
-      top: -1.4rem;
-      right: .4rem;
-      background-color:$accent-color;
-      color: $bg-color-3;
-      font-size: 1.8rem;
-      transform: rotate(-45deg);
-      // padding: 0rem 0.2rem;
+      top: -1.2rem;
+      right: .3rem;
+      background-color:$bg-color-2;
+      color: white;
+      font-size: 2rem;
+      // transform: rotate(-45deg);
+      padding-bottom: 10px ;
       border: 1.6px solid $bg-color-3;// в rem не получается подобрать правильный размер
-      border-radius: 0.5rem;
-      line-height: 1;
+      border-radius: 50%;
+      line-height: 0.7;
       font-weight: bold;
       text-align: center;
       @include isMobile{
         top: -1.4rem;
         right: 0.1rem;
+        width: 2.2rem;
+      height: 2.2rem;
+      line-height: 0.6;
       }
     }
     

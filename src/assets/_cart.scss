@@ -242,12 +242,39 @@
     }
 }
 
+.select-city-reg{
+    display: flex;
+    
+    justify-content: space-between;
+    gap: 3rem;
+    @include isMobile{
+        flex-direction: column;
+    }
+}
+
+.select-city-reg select{
+    width: 47%;
+    font-size: 2.7rem;
+    padding: .5rem;
+    // &:focus{
+    //     color: #ccc;
+    // }
+    @include isMobile{
+        width: 100%;
+    }
+}
+
+
 .delivery-method{
     display: flex;
     flex-direction: column;
     border:#ddd 0.1rem solid ;
-    padding: 1rem;
-    margin: 1.5rem 0;
+    padding: 1.8rem;
+    margin: 1.5rem 0; 
+}
+
+.delivery-method-form select{
+    width: 100%;
 }
 
 label{
@@ -255,16 +282,15 @@ label{
 }
 
 .form-label{
-    
     margin-right: 2rem;
 }
 
 .delivery-method-form{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     
+    margin-bottom: 2rem ;
+    font-size: 2.8rem;
 }
+
 .comment-order{
     width: 100%;
     textarea{
