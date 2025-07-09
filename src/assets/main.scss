@@ -23,7 +23,7 @@
     @include isMobile{
       display: flex;
       flex-direction: column;
-      background-position: 50% 2%;
+      background-position: 50% 3%;
       background-size: 65%;
       
     }
@@ -59,7 +59,7 @@
       flex-direction: column;
       width: 100%;
       margin: 0 auto;
-      padding-top: 22rem;
+      padding-top: 24rem;
       .h2-hero{
         font-size: 4.5rem;
         padding-top: 6rem;
@@ -220,7 +220,8 @@
     position: relative;
     z-index: -1; 
     height:60rem;
-    width: 70rem;
+    max-width: 70rem;
+        width: 100%;
     @include isMobile{
       justify-content:center;
     }

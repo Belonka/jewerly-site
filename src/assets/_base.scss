@@ -28,6 +28,7 @@ body {
   font: 400 185%/1.4 "Cormorant Garamond", sans-serif;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
@@ -144,6 +145,10 @@ p + p {
     background-color: $title-text;
     color: #0a0908;;
   }
+}
+
+select{
+  color: #0a0908;
 }
 
 

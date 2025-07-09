@@ -160,10 +160,12 @@ export default function ShoppingCartPage(){
                     </form>
                         </div>
                 </div>
-                <div className='delivery-method'>
+                <div className='customer-data'>
+                    
                     <h4>Спосіб оплати</h4>
+                    <div className='delivery-method-form'>
                     <form action="">
-                        <label htmlFor="payment" className="form-label">Оберіть спосіб оплати: </label>
+                        {/* <label htmlFor="payment" className="form-label">Оберіть спосіб оплати: </label> */}
                         <select id="payment" className="select-payment">
                             <option value="">Оберіть спосіб оплати</option>
                             <option value="cash_on_delivery">Оплата при отриманні</option>
@@ -172,10 +174,11 @@ export default function ShoppingCartPage(){
                 </select>
                 </form>
                 </div>
+                </div>
                 <div className='comment-order'>
                 <textarea  placeholder=" Коментар" name="name " className="comment-input"/>
                 </div>
-                <SendOrderButton className='btn-2'/> 
+                <SendOrderButton className='btn-2 btn-send-order'/> 
              </div>
              </div>
             </div>

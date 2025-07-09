@@ -92,11 +92,12 @@
       font-weight: bold;
       text-align: center;
       @include isMobile{
-        top: -1.4rem;
-        right: 0.1rem;
+        top: -.8rem;
+        right: -0.8rem;
         width: 2.2rem;
       height: 2.2rem;
       line-height: 0.6;
+      border: 1.6px solid white;
       }
     }
     
