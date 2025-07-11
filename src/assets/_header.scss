@@ -79,14 +79,14 @@
       position: absolute;
       width: 2.3rem;
       height: 2.3rem;
-      top: -1.2rem;
-      right: .3rem;
+      top: -0.8rem;
+      right: -.5rem;
       background-color:$bg-color-2;
       color: white;
       font-size: 2rem;
       // transform: rotate(-45deg);
       padding-bottom: 10px ;
-      border: 1.6px solid $bg-color-3;// в rem не получается подобрать правильный размер
+      border: 1.6px solid white;// в rem не получается подобрать правильный размер
       border-radius: 50%;
       line-height: 0.7;
       font-weight: bold;

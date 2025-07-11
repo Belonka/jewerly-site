@@ -119,7 +119,7 @@ export default function ShoppingCartPage(){
                     <h4>Спосіб доставки</h4>
                     <div className=' delivery-method-form'>
                     <form action="">
-                    {/* <label htmlFor="delivery" className="form-label">Оберіть спосіб доставки:</label> */}
+                    
                         <select
                             id="delivery"
                             value={deliveryMethod}
@@ -136,7 +136,7 @@ export default function ShoppingCartPage(){
                     </div>
                     <div className='delivery-method-form'>
                     <form action="">
-                        {/* <label htmlFor="town-for delivery" className="form-label">Оберіть місто: </label> */}
+                       
                         
                         <select name="" id="town-for delivery" required onChange={handleDepartmentChange} value={selectedDepartments}>
                         <option value=""> Оберіть місто </option>
@@ -149,7 +149,7 @@ export default function ShoppingCartPage(){
                     
                     <div className='delivery-method-form'>
                     <form action="">
-                        {/* <label htmlFor="" className="form-label">Оберіть відділення: </label> */}
+                        
                         
                         <select name="" id="" required onChange={(e) => setSelectedCity(e.target.value)}>
                         <option value=""> Оберіть відділення </option>
@@ -165,7 +165,7 @@ export default function ShoppingCartPage(){
                     <h4>Спосіб оплати</h4>
                     <div className='delivery-method-form'>
                     <form action="">
-                        {/* <label htmlFor="payment" className="form-label">Оберіть спосіб оплати: </label> */}
+                       
                         <select id="payment" className="select-payment">
                             <option value="">Оберіть спосіб оплати</option>
                             <option value="cash_on_delivery">Оплата при отриманні</option>

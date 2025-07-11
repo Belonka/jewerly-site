@@ -16,6 +16,10 @@
     }
 }
 
+.shopping-Cart{
+    padding: 1rem;
+}
+
 .items-cart{
     width: 90%;
     @include isMobile{
@@ -97,7 +101,9 @@
     width: 4rem;
     height: 4rem;
     border: none;
+    background: none;
     font-size: $font-s;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     text-align: center;
     &:hover{
@@ -120,8 +126,11 @@
     width: 3rem;
     height: 3rem;
     border: none;
-    font-size: $font-m;
-    font-weight: 600;
+    background: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: $font-s;
+    
+    font-weight: 200;
     text-align: center;
     &:hover{
     cursor: pointer;
@@ -144,6 +153,7 @@
     display: flex;
     align-items: center;
     text-align: center;
+    
     span{
         font-size: $font-m;
     font-weight: 600;
@@ -196,16 +206,15 @@
 .btn-sum{
     display: flex;
     justify-content: flex-end;
-    flex-direction: row;
-    gap: 1rem;
     align-items: flex-end;
-    .btn-clean{
-        width: 30rem;
-        color: #726f6f;
-    }
+    margin: 0 1rem 1rem;
 }
 
-
+.btn-clean{
+    display: flex;
+    color: #726f6f;
+    border: .1rem solid #726f6f;
+}
 
 .cart-client-form{
     width: 60%;
@@ -256,9 +265,6 @@
     width: 47%;
     font-size: 2.7rem;
     padding: .5rem;
-    // &:focus{
-    //     color: #ccc;
-    // }
     @include isMobile{
         width: 100%;
     }
@@ -302,6 +308,25 @@ label{
 .comment-input{
     border: #ddd 0.1rem solid;
 }
+
+.checkbox-wrapper{
+    display: flex;
+    gap: 1rem;
+    label{
+        font-size: 2rem;
+        cursor: none;
+    }
+    a{
+        text-decoration: underline;
+    }
+    input{
+        cursor: pointer;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
 
 .btn-send-order{
     width: 100%;

@@ -2,14 +2,13 @@
 export async function POST(req) {
     try{
         const body = await req.json()
-        console.log("Получено тело запроса:", body);
         const {name, phone, items, total} = body;
-        console.log("Полученные данные:", { name, phone, items, total });
+        
 
         const token = process.env.TELEGRAM_BOT_TOKEN;
         const chatID = process.env.TELEGRAM_CHAT_ID;
         if (!token || !chatID) {
-            console.error("Переменные окружения не заданы");
+            
             return Response.json({ message: "Ошибка: нет токена или chatID" }, { status: 500 });
           }
 
