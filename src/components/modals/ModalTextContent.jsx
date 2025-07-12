@@ -53,10 +53,10 @@ export default function ModalTextContent({title, text}) {
         <form action="" className="modal-form" onSubmit={handleSubmit}>
           <input type="text" placeholder="Ваше ім'я" name="name" value={formData.name} onChange={handleChange} required/>
           <input type="tel" placeholder="Номер телефону" name="phone" value={formData.phone} onChange={handleChange} required/>
-          <textarea  placeholder=" Коментар" name="name" value={formData.comment} onChange={handleChange} className="comment-input"/>
+          <textarea  placeholder="Коментар" name="comment" value={formData.comment} onChange={handleChange} className="comment-input"/>
 
           <div className='checkbox-wrapper'>
-        <input type="checkbox" id='subscribe' name='subscribe' checked={formData.subscribe} onChange={handleChange} />
+        <input type="checkbox" id='subscribe' name='subscribe'  checked={formData.subscribe} onChange={handleChange} />
         <label>
           Я бажаю отримувати на електронну поштову скриньку найсвіжіші новини  та погоджуюся з {''} <Link className='footer-politice' href='/polityka_pryvatnosti'>Політикою конфіденційності.</Link>
           </label> 
