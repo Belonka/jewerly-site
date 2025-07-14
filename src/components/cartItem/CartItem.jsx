@@ -38,11 +38,12 @@ export default function CartItem({item}) {
         <div className='cart-name-image'>
         <Image src={item.images[0]} alt={item.name} width={80} height={80} />
         <h3>{item.name}</h3>
+        
+        </div>
+        </Link>
         <div className='cart-item-quantity-mobile'>
         {quantityControlsMobile}
         </div>
-        </div>
-        </Link>
         <div className='cart-item-info'>
             {quantityControls}
   

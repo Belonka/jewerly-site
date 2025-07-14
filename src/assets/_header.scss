@@ -45,34 +45,25 @@
     }
 
     .profile-cart{
-      
-      @include isMobile{
-        margin-left: 11rem;
-        align-items:center;
+      align-items:center;
         text-align: center;
-        
+        padding-top: 1rem;
+      @include isMobile{
+        margin-left: 17rem;
       }
     }
 
-    .private-room{
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      gap: 3rem;
-      align-items: center;
-      text-align: center;
-    }
-
-    .private-room img{
-      transition: transform 0.5s ease;
-        &:hover{
-      transform: scale(1.2);
-    }
-    
-    }
 
     .cart-icon-wrapper {
       position: relative;
+      align-items: center;
+      text-align: center;
+      img{
+        transition: transform 0.5s ease;
+        &:hover{
+      transform: scale(1.2);
+      }
+    }
     }
     
     .cart-count {
@@ -84,7 +75,6 @@
       background-color:$bg-color-2;
       color: white;
       font-size: 2rem;
-      // transform: rotate(-45deg);
       padding-bottom: 10px ;
       border: 1.6px solid white;// в rem не получается подобрать правильный размер
       border-radius: 50%;

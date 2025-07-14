@@ -6,18 +6,29 @@ import {getRegions, getCities, getDepartments} from '@/lib/addressAPI'
 import CartContent from '@/components/cartContent/CartContent';
 
 export default function ShoppingCartPage(){
-   const [deliveryMethod, setDeliveryMethod] = useState('')
     const { clearCart } = useCart();
     const [regions, setRegions] = useState([]);
     const [cities, setCities] = useState([]);
-    const [selectedRegion, setSelectedRegion] = useState('');
-    const [selectedCity, setSelectedCity] = useState('');
-    const [regionRef, setRegionRef] = useState('');
     const [departments, setDepartments] = useState([]);
-    const [selectedDepartments, setSelectedDepartments] = useState('');
 
-    const handleChange =(e) => {
-        setDeliveryMethod(e.target.value)
+    const [form, setForm] = useState({
+        deliveryMethod: '',
+        selectedRegion: '',
+        selectedCity: '',
+        regionRef: '',
+        selectedDepartments: '',
+        paymentMethod: '',
+        street: '',
+        house: '',
+        postalCode: '',
+        comment: '',
+      });
+
+
+
+    const handleFormChange =(e) => {
+        const {name, value} = e.target
+        setForm((prev) => ({...prev, [name]:value}))
     }
 
     useEffect(() => {
@@ -27,9 +38,9 @@ export default function ShoppingCartPage(){
 
     const handleRegionChange = ((e) => {
         const ref = e.target.value; 
-        setSelectedRegion(ref); 
+        setForm(ref); 
         const region = regions.find((region) => region.Ref === ref);
-        setRegionRef(ref); 
+        setForm(ref); 
 
         if(ref) {
             getCities(ref).then((data) => {
@@ -39,12 +50,12 @@ export default function ShoppingCartPage(){
         }else{
             setCities([]) 
         }
-        setSelectedCity('')
+        setForm('')
     })
 
     const handleDepartmentChange = ((e) => {
         const refDep = e.target.value;
-        setSelectedCity(refDep)
+        setForm(refDep)
         const city = cities.find((c) => c.Description === selectedCity)
         if(city?.Ref) {
             getDepartments(city.Ref).then((data) => {
@@ -53,7 +64,7 @@ export default function ShoppingCartPage(){
         }else{
             setDepartments([])
         }
-        setSelectedDepartments('')
+        setForm('')
     })
 
 
@@ -92,7 +103,11 @@ export default function ShoppingCartPage(){
                     
                 <form action="">
                 <div className='select-city-reg'>
-                    <select required onChange={handleRegionChange} value={selectedRegion}>
+                    <select required onChange={(e) => {
+                        handleFormChange(e);
+                        handleRegionChange(e)
+                    }} 
+                    value={form.selectedRegion}>
                     <option value="" >Оберіть область</option>
                      {regions.map((region) =>(
                         <option key = {region.Ref} value={region.Ref}>
@@ -101,7 +116,7 @@ export default function ShoppingCartPage(){
                         
                      ))}
                      </select>
-                     <select required onChange={(e) => setSelectedCity(e.target.value)} disabled={!cities.length} >
+                     <select required onChange={(e) => setForm(e.target.value)} disabled={!cities.length} >
 
                      <option value="" >Оберіть Місто</option>
                      {cities.map((city) => (
@@ -122,8 +137,8 @@ export default function ShoppingCartPage(){
                     
                         <select
                             id="delivery"
-                            value={deliveryMethod}
-                            onChange={handleChange}
+                            value={form.deliveryMethod}
+                            onChange={handleFormChange}
                             className="select-delivery"
                         >
                             <option value=""> Оберіть службу </option>
@@ -138,7 +153,10 @@ export default function ShoppingCartPage(){
                     <form action="">
                        
                         
-                        <select name="" id="town-for delivery" required onChange={handleDepartmentChange} value={selectedDepartments}>
+                        <select name="" id="town-for delivery" required onChange={(e) => {
+                        handleFormChange(e);
+                        handleRegionChange(e)
+                    }}  value={form.selectedDepartments}>
                         <option value=""> Оберіть місто </option>
                         {cities.map((city) => (
                         <option key={city.Ref} value={city.Description}>{city.Description}</option>
@@ -146,8 +164,22 @@ export default function ShoppingCartPage(){
                         </select>
                     </form>
                     </div>
-                    
+
                     <div className='delivery-method-form'>
+                    <form action="">
+                        
+                        
+                        <select name="" id="" required onChange={(e) => handleDepartmentChange(e.target.value)}>
+                        <option value=""> Оберіть відділення </option>
+                        {departments.map((dep) => (
+                            <option key={dep.Ref} value={dep.Description}>{dep.Description}</option>
+                        ))}
+                        </select>
+                    </form>
+                        </div>
+
+                    
+                    {/* <div className='delivery-method-form'>
                     <form action="">
                         
                         
@@ -158,7 +190,7 @@ export default function ShoppingCartPage(){
                         ))}
                         </select>
                     </form>
-                        </div>
+                        </div> */}
                 </div>
                 <div className='customer-data'>
                     

@@ -44,6 +44,9 @@ h2 {
   line-height: 1;
   text-transform: uppercase;
 margin-bottom: 2rem;
+@include isMobile{
+  font-size: $font-l;
+}
 }
 
 h3 {
@@ -149,6 +152,14 @@ p + p {
 
 select{
   color: #0a0908;
+  
+  option{
+    @include isMobile{
+      max-width: 5rem;
+    }
+  }
 }
+
+
 
 

@@ -24,12 +24,6 @@ export default function Header() {
 
   const privateRoom = [
     {
-      href: "https://instagram.com/vetola.jewellery",
-      icon: "/icons/profile.svg",
-      alt: "Profile",
-    },
-    
-    {
       href: "/shopping-cart",
       icon: "/icons/shopping-cart.svg",
       alt: "Cart",
@@ -54,21 +48,19 @@ export default function Header() {
           <a href="tel:+380958198065">+380 95 819 80 65</a>
           <button className="btn-2" onClick={() => setActiveModal('consult')}>Зв'язатись з нами</button>
           </div>
-        
-        <nav className="profile-cart">
-                  <ul className="private-room">
-                    {privateRoom.map(({ href, icon, alt }) => (
-                      <li key={href} className="cart-icon-wrapper">
+
+         <div className="profile-cart">
+         {privateRoom.map(({ href, icon, alt }) => (
+                      <div key={href} className="cart-icon-wrapper">
                         <Link href={href}  aria-label={alt}>
                           <Image src={icon} alt={alt} width={24} height={24} priority />
                           {alt === "Cart" && cartCount > 0 && (
                          <span className="cart-count">{cartCount}</span>
                          )}
                         </Link>
-                      </li>
+                      </div>
                     ))}
-                  </ul>
-                </nav>
+         </div>
                 </div>
         <div className="burger-menu-container"  onClick={menuToggle}>
                         <div className="burger-icon flex-cl">

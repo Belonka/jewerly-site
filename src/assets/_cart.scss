@@ -24,6 +24,7 @@
     width: 90%;
     @include isMobile{
         width: 100%;
+        
     }
 }
 
@@ -47,7 +48,7 @@
         font-size: $font-m;
     }
     @include isMobile{
-        gap: 5rem;
+        gap: 3rem;
     }
 }
 
@@ -253,6 +254,8 @@
 
 .select-city-reg{
     display: flex;
+    // width: 100%;
+    max-width: 100%;
     
     justify-content: space-between;
     gap: 3rem;
@@ -262,14 +265,20 @@
 }
 
 .select-city-reg select{
-    width: 47%;
+    max-width: 100%;
     font-size: 2.7rem;
     padding: .5rem;
     @include isMobile{
-        width: 100%;
+        width: 100%;       
     }
+    option{
+        @include isMobile{
+        width: 100%;
+        box-sizing: border-box;
+        }
+    }
+   
 }
-
 
 .delivery-method{
     display: flex;
