@@ -1,0 +1,131 @@
+@use "base" as *;
+.item-page{
+  width: 100%;
+  
+  text-align: center;
+  align-items: center;
+  h2{
+    padding: 2rem;
+  }
+}
+
+.image-gallery {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    @include isMobile{
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .image-gallery img {
+    width: 100rem;
+  height: 60rem;
+  cursor: pointer;
+  border-radius: .8rem;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+  }
+
+  .cardSwiper-main {
+    width: 100%;
+    max-width: 100rem;
+    height: 50rem;
+    margin-bottom: 2rem;
+  }
+
+  .cardSwiper-main .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cardSwiper-main img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    cursor: zoom-in;
+  }
+  
+  .cardSwiper-thumbs {
+    width: 100%;
+    max-width: 80rem;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .swiper-slide{
+    width: 20rem;
+  }
+  
+  .cardSwiper-thumbs .swiper-slide {
+    height: 10rem;
+    width: 80rem;
+    opacity: 0.6;
+    // border-radius: 1rem;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+    // border-radius: 10px;
+    overflow: hidden;
+    justify-content: center;
+  }
+  
+  .cardSwiper-thumbs .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+  
+  .cardSwiper-thumbs img {
+    width: 20rem;
+    height: 100%;
+    // object-fit: contain ;
+    object-fit: cover;          /* для миниатюр обычно лучше cover */
+    display: block;
+    // border-radius: 0.4rem;
+  }
+
+  .zoomOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.75);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.zoomContent {
+  width: min(1200px, 96vw);
+  height: min(85vh, 900px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.zoomImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: transparent;
+}
+
+.zoomClose {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  font-size: 22px;
+  background: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+}
+
+  

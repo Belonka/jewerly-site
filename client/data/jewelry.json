@@ -1,0 +1,253 @@
+[
+  {
+    "id": 1,
+    "name": "Каблучка  Lips",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 380,
+    "isNew": false,
+    "images": [
+      "products/rings/Lips.PNG",
+      "products/rings/ring-Lips.png"
+    ],
+    "slug": "kabluchka-lips",
+    "material": "stainless steel",
+    "size": "17mm"
+  },
+  {
+    "id": 2,
+    "name": "Кільце Куля",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 400,
+    "isNew": true,
+    "alt": "",
+    "images": [
+      "products/rings/Ring-ball.PNG",
+      "products/rings/ring-ball2.png"
+    ],
+    "slug": "kiltse-kulia",
+    "material": "stainless steel",
+    "size": "17mm"
+  },
+  {
+    "id": 3,
+    "name": "Кільце Сердця",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 800,
+    "isNew": true,
+    "images": [
+      "/images/Ring-hearts.JPG"
+     
+    ],
+    "slug": "kiltse-serdtsia",
+   "material": "stainless steel",
+    "size": "17mm"
+  },
+  {
+    "id": 4,
+    "name": "Кільце Квіти",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 800,
+    "isNew": false,
+    "images": [
+      "/images/Ring-flowers.PNG"
+    ],
+    "slug": "kiltse-kvity",
+    "material": "stainless steel",
+    "size": "17mm"
+  },
+  {
+    "id": 5,
+    "name": "Каблучка Сердечко",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 350,
+    "isNew": true,
+    "images": [
+      "/images/Ring-heart.PNG",
+      "/images/ring-heart2.png"
+    ],
+    "slug": "kabluchka-serdechko",
+    "material": "stainless steel",
+    "size": "18mm"
+  },
+  {
+    "id": 6,
+    "name": "Каблучка Abstraction",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 420,
+    "isNew": false,
+    "images": [
+      "/images/ringAbstraction.PNG"
+    ],
+    "slug": "kabluchka-abstraction",
+    "material": "stainless steel",
+    "size": "17mm"
+  },
+  {
+    "id": 7,
+    "name": "Ланцюжок Snake",
+    "categoryUkr": "Ланцюжки",
+    "category": "lantsiuzhky",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/Necklace.PNG"
+    ],
+    "slug": "lantsiuzhok",
+    "description": "stainless steel",
+    "size": "370mm"
+  },
+  {
+    "id": 8,
+    "name": "Набір Gold",
+    "categoryUkr": "Набори",
+    "category": "nabory",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/setsGold.PNG",
+      "/images/set-Gold2.avif"
+    ],
+    "slug": "nabir-gold",
+    "material": "stainless steel",
+    "size": "17mm"
+  },
+  {
+    "id": 9,
+    "name": "Браслет Pin",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/braceletsPin.JPG"
+    ],
+    "slug": "braslet-pin",
+    "material": "stainless steel",
+    "size": "17mm"
+  },
+  {
+    "id": 10,
+    "name": "Каблучкa Black",
+    "categoryUkr": "Каблучки",
+    "category": "kabluchky",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/Ring-black.JPG"
+    ],
+    "slug": "kabluchka-black",
+    "material": "stainless steel",
+    "size": "17mm"
+  },
+  {
+    "id": 11,
+    "name": "Браслет  Жемчуг-Heart",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": true,
+    "images": [
+      "/images/goldHeart.png",
+      "/images/goldHeartHand.png"
+    ],
+    "slug": "braslet-zhemchuh-heart",
+    "material": "stainless steel",
+    "size": "400mm"
+  },
+  {
+    "id": 12,
+    "name": "Браслет Цвях з камінцями",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/pinCrystall.png",
+      "/images/pinCrystall2.png.png"
+    ],
+    "slug": "braslet-tsviakh-z-kamintsiamy",
+    "material": "stainless steel",
+    "size": "400mm"
+  },
+  {
+    "id": 13,
+    "name": "Браслет  Хвиля",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/braceletWave.png",
+      "/images/braceletWave2.png"
+    ],
+    "slug": "braslet-khvylia",
+    "material": "stainless steel",
+    "size": "400mm"
+  },
+  {
+    "id": 14,
+    "name": "Браслет Жемчуг",
+    "categoryUkr": "Браслети",
+    "category": "braslety",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/braceletPear.png",
+      "/images/braceletPear2.png"
+    ],
+    "slug": "braslet-zhemchuh",
+    "material": "stainless steel",
+    "size": "200mm"
+  },
+  {
+    "id": 15,
+    "name": "Ланцюжок Жемчуг",
+    "categoryUkr": "Ланцюжки",
+    "category": "lantsiuzhky",
+    "price": 600,
+    "isNew": false,
+    "images": [
+      "/images/necklesPearl.png",
+      "/images/necklesPearl2.png"
+    ],
+    "slug": "lantsiuzhok-zhemchuh",
+    "material": "stainless steel",
+    "size": "400mm"
+  },
+  {
+    "id": 16,
+    "name": "Ланцюжок Heart",
+    "categoryUkr": "Ланцюжки",
+    "category": "lantsiuzhky",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/necklesHeart.png",
+      "/images/necklesHeart2.png"
+    ],
+    "slug": "lantsiuzhok-heart",
+    "material": "stainless steel",
+    "size": "420mm"
+  },
+  {
+    "id": 17,
+    "name": "Ланцюжок Crystall",
+    "categoryUkr": "Ланцюжки",
+    "category": "lantsiuzhky",
+    "price": 700,
+    "isNew": false,
+    "images": [
+      "/images/necklesCrystall.png",
+      "/images/necklesCrystall2.png"
+    ],
+    "slug": "lantsiuzhok-crystall",
+    "material": "stainless steel",
+    "size": "400mm"
+  }
+]
