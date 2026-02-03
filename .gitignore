@@ -39,3 +39,25 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# === MONOREPO (client / server / sanity) ===
+
+# dependencies everywhere
+**/node_modules/
+
+# build outputs
+**/.next/
+**/dist/
+**/build/
+**/out/
+
+# env files everywhere
+**/.env
+**/.env.*
+
+# sanity
+**/.sanity/
+**/.cache/
+
+# logs
+**/*.log
