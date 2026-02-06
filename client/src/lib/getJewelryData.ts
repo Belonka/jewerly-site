@@ -48,7 +48,32 @@ export async function getJewelryData() {
   // 
   
   const res = await client.fetch(query);
-  console.log("✅ getJewelryData fetched:", res?.length, res?.[0]); // <-- важно
+  const norm = (v: unknown): string =>
+  String(v ?? "").trim().toLowerCase();
+  const cats = res.map((x) => x.category);
+  const uniqueCats: string[] = Array.from(
+  new Set(cats.map(norm))
+).filter((c): c is string => Boolean(c));
+
+  const counts = uniqueCats.reduce<Record<string, number>>((acc, c) => {
+  acc[c] = res.filter((x) => norm(x.category) === c).length;
+  return acc;
+}, {});
+
+  const missingCategory = res.filter(
+  (x) => !norm(x.category)
+).length;
+
+  console.log("🔧 Sanity ENV:", {
+    projectId,
+    dataset,
+    hasToken: !!process.env.SANITY_API_READ_TOKEN,
+  });
+  console.log("✅ getJewelryData fetched:", res?.length);
+  console.log("🏷️ categories(unique):", uniqueCats);
+  console.log("📊 category counts:", counts);
+  console.log("⚠️ missing/empty category count:", missingCategory);
+
   return res;
 }
 
