@@ -9,7 +9,7 @@ import Button from '@/components/button/Button';
 import { resolveImage } from "@/lib/resolveImage";
 
 
-export const dynamicParams = false;
+export const dynamicParams = true;
 // const images = item.images.map(toAssetUrl);
 
 export async function generateStaticParams() {

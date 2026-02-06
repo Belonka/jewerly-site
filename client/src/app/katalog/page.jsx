@@ -32,6 +32,8 @@ export default async function CatalogPage() {
   console.log("SANITY products:", data?.length, data?.[0]);
   const categories = [...new Set(data.map((item) => item.category))];
 
+  const categorySlug = (v) =>
+  encodeURIComponent(String(v ?? "").trim().toLowerCase());
 
   const breadcrumbItems = [
     {
@@ -50,14 +52,14 @@ export default async function CatalogPage() {
 
         return (
           <div key={category} className="category-section">
-            <Link href={`/katalog/${category}`}>
+            <Link href={`/katalog/${categorySlug(category)}`}>
               <h2 className="">{categoryNameUkr}</h2>
             </Link>
          
             <CatalogSlider items={filteredItems} />
           
             <div className="btn-category">
-              <Link href={`/katalog/${category}`}>
+              <Link href={`/katalog/${categorySlug(category)}`}>
                 <button className="btn-2 ">Дивитись більше</button>
               </Link>
             </div>

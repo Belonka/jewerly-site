@@ -1,5 +1,6 @@
 
 import Link from "next/link";
+import Image from "next/image";
 import Button from '../button/Button' ;
 import { resolveImage } from "@/lib/resolveImage";
 
@@ -12,10 +13,13 @@ export default function Card({ item }) {
     <div className="card">
       {item.isNew && <span className="badge-new">NEW</span>}
       <div className="card-img-container">
-        <img 
+        <Image 
           src={imgSrc}
         // src={item.images[0]} 
         alt={item.name} 
+        width={400}
+  height={300}
+  sizes="(max-width: 768px) 100vw, 300px"
         className="card-image" />
       </div>
       <Link href={`/katalog/${item.category}/${item.slug}`} >
