@@ -1,13 +1,3 @@
-// import fs from 'fs';
-// import path from 'path';
-
-
-// export async function getJewelryData(){
-//     const filePath = path.join(process.cwd(), 'data', 'jewelry.json');
-//     const jsonData = fs.readFileSync(filePath, 'utf-8');
-//     const jewelryData = JSON.parse(jsonData);
-//     return jewelryData;
-// }
 
 import { createClient } from "@sanity/client";
 
@@ -48,31 +38,6 @@ export async function getJewelryData() {
   // 
   
   const res = await client.fetch(query);
-  const norm = (v: unknown): string =>
-  String(v ?? "").trim().toLowerCase();
-  const cats = res.map((x) => x.category);
-  const uniqueCats: string[] = Array.from(
-  new Set(cats.map(norm))
-).filter((c): c is string => Boolean(c));
-
-  const counts = uniqueCats.reduce<Record<string, number>>((acc, c) => {
-  acc[c] = res.filter((x) => norm(x.category) === c).length;
-  return acc;
-}, {});
-
-  const missingCategory = res.filter(
-  (x) => !norm(x.category)
-).length;
-
-  console.log("🔧 Sanity ENV:", {
-    projectId,
-    dataset,
-    hasToken: !!process.env.SANITY_API_READ_TOKEN,
-  });
-  console.log("✅ getJewelryData fetched:", res?.length);
-  console.log("🏷️ categories(unique):", uniqueCats);
-  console.log("📊 category counts:", counts);
-  console.log("⚠️ missing/empty category count:", missingCategory);
 
   return res;
 }

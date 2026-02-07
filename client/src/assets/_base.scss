@@ -4,6 +4,7 @@ $width-mob: 980px;
 
 
 
+
 @mixin isMobile {
   @media (max-width: $width-mob) {
     @content;

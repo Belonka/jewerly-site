@@ -183,18 +183,29 @@
       }
     }
 
-  // .new-item-img-container {
-  //   width: 90%;
-  //   height: 30rem;
-  //   position: relative;
-  //   margin: 1rem auto;
-  //   object-fit: cover;
-  // }
+  
+
+  .card-img-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 2.5;   
+  overflow: hidden;
+  
+}
 
   .card-image{
-    // height: 30rem;
     object-fit: cover;
+    // object-position: center;
+  //   width: 100% !important;
+  // height: 100% !important;
   }
+
+  .card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+}
 
   
   .card-title {
@@ -228,11 +239,9 @@
   }
 
   .aboutUs{
-    // margin: 0 auto;
     display: flex;
     justify-content:flex-start;
     align-items:center;
-    // gap: 20rem;
     @include isMobile{
       display: flex;
       flex-direction: column;
@@ -334,72 +343,6 @@
             }
       }
     }
-
-    // .form-footer{
-    //   input{
-    //     border: 0.2rem solid #ccc;
-    //     width: 28rem;
-    //     margin-right: 1rem;
-    //   }
-    //   button{
-    //     width: 9.5rem;
-    //     background-color: $accent-color;
-    //     &:hover {
-    //       background-color: $title-text;
-    // color: #0a0908;;
-    //     }
-    //   }
-      
-    // }
-
-    // .checkbox-wrapper {
-    //   position: relative;
-    //   display: flex;
-    //   align-items: flex-start;
-    //   gap: 0.5rem;
-    //   max-width: 40rem;
-    //   margin-top: 1rem;
-    
-    //   input[type="checkbox"] {
-    //     appearance: none;
-    //     width: 3rem;
-    //     height: 1.8rem;
-    //     border: 0.1rem solid #a19c9c;
-    //     border-radius: 0.1rem;
-    //     cursor: pointer;
-    //     position: relative;
-    //     margin-top: 0.2rem;
-    //   }
-    
-    //   input[type="checkbox"]::after {
-    //     content: '';
-    //     display: block;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 1.5rem;
-    //     height: 10px;
-    //     background-image: url('/icons/checked.png');
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     opacity: 0;
-    //     transition: opacity 0.2s;
-    //   }
-    
-    //   input[type="checkbox"]:checked::after {
-    //     opacity: 1;
-    //   }
-    
-    //   label {
-    //     font-size: 1.5rem;
-    //     line-height: 1.4;
-    //     position: relative;
-    //     cursor: pointer;
-    //   }
-    // }
-    
-
-    
 
     .footer-2{
       padding: .8rem 0;

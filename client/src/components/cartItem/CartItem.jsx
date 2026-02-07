@@ -37,13 +37,17 @@ export default function CartItem({item}) {
     <div className='cart-item'>
     <Link href={`/katalog/${item.category}/${item.slug}`}>
         <div className='cart-name-image'>
+          <div className="cart-thumb">
         <Image 
         src={src} 
-        alt={item.name || "Product image"} 
-        width={80} 
-        height={80} 
+        alt={item.name || "Product image"}
+        fill 
+        sizes="80px"
+        // width={80} 
+        // height={80} 
         className="cart-image"
         />
+        </div>
         <h3>{item.name}</h3>
         
         </div>
