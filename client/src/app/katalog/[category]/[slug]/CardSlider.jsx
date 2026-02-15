@@ -48,9 +48,25 @@ export default function CardSlider({ images }) {
                   e.currentTarget.src = "/images/fallback.jpg"; // лежит в /public/images/
                 }}
               />
-            {/* <img src={src} alt={`Зображення ${idx + 1}`} /> */}
+           
           </SwiperSlide>
         ))}
+        {/* {images.map((item, idx) => {
+          const src = typeof item === "string" ? item : item?.src;
+
+          return (
+          <SwiperSlide key={idx}>
+            <img
+              src={resolveImage(src)}
+              alt={item?.alt || `Зображення ${idx + 1}`}
+              onClick={() => openZoom(idx)}
+              onError={(e) => {
+                e.currentTarget.src = "/images/fallback.jpg";
+              }}
+            />
+          </SwiperSlide>
+         )
+      })} */}
       </Swiper>
 
       <Swiper
@@ -63,7 +79,21 @@ export default function CardSlider({ images }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="cardSwiper-thumbs"
       >
-        
+        {/* {images.map((item, idx) => {
+          const src = typeof item === "string" ? item : item?.src;
+
+          return (
+          <SwiperSlide key={idx}>
+            <img
+              src={resolveImage(src)}
+              alt={item?.alt || `Зображення ${idx + 1}`}
+              onError={(e) => {
+                e.currentTarget.src = "/images/fallback.jpg";
+              }}
+            />
+          </SwiperSlide>
+          )
+        })} */}
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
             <img
@@ -91,14 +121,32 @@ export default function CardSlider({ images }) {
 
           {/* стопаем закрытие при клике по изображению */}
           <div className="zoomContent" onClick={(e) => e.stopPropagation()}>
-            <img
+            {(() => {
+        const item = images?.[activeIndex];
+        const src = typeof item === "string" ? item : item?.src;
+        const resolved = resolveImage(src);
+
+        if (!resolved) return null;
+
+              return (
+                <img
+                  className="zoomImage"
+                  src={resolveImage(src) || "/images/fallback.jpg"}
+                  alt={(typeof item === "object" && item?.alt) ? item.alt : `Зображення ${activeIndex + 1}`}
+                  onError={(e) => {
+                    e.currentTarget.src = "/images/fallback.jpg";
+                  }}
+                />
+              )
+            {/* <img
               className="zoomImage"
               src={resolveImage(images[activeIndex])}
               alt={`Зображення ${activeIndex + 1}`}
               onError={(e) => {
                 e.currentTarget.src = "/images/fallback.jpg";
               }}
-            />
+            /> */}
+            })()}
           </div>
         </div>
       )}

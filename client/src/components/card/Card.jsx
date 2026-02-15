@@ -6,8 +6,16 @@ import { resolveImage } from "@/lib/resolveImage";
 
 
 export default function Card({ item }) {
-  const imgSrc = resolveImage(item.images?.[0] ?? "");
+  const first = item.images?.[0];
+  if (!first) return null; 
+  console.log("RAW:", item.images?.[0]);
+  console.log("RESOLVED:", resolveImage(item.images?.[0]));
+  const imgSrc = resolveImage(first);
+    
 
+  const alt = item.name;
+  // const imgSrc = resolveImage(item.images?.[0] ?? "");
+  
   return (
     <>
     <div className="card">
@@ -18,7 +26,8 @@ export default function Card({ item }) {
         <Image 
           src={imgSrc}
         // src={item.images[0]} 
-        alt={item.name} 
+        // alt={item.name}
+        alt={alt} 
         fill
         // width={400}
         // height={250}

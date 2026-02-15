@@ -29,6 +29,10 @@ export async function getJewelryData() {
     categoryUkr,
     "slug": slug.current,
     "images": imageKeys,
+    // "images": imageKeys[]{
+    //   "src": coalesce(src, @),
+    //   "alt": alt
+    // },
     isNew,
     material,
     description,
