@@ -51,22 +51,7 @@ export default function CardSlider({ images }) {
            
           </SwiperSlide>
         ))}
-        {/* {images.map((item, idx) => {
-          const src = typeof item === "string" ? item : item?.src;
-
-          return (
-          <SwiperSlide key={idx}>
-            <img
-              src={resolveImage(src)}
-              alt={item?.alt || `Зображення ${idx + 1}`}
-              onClick={() => openZoom(idx)}
-              onError={(e) => {
-                e.currentTarget.src = "/images/fallback.jpg";
-              }}
-            />
-          </SwiperSlide>
-         )
-      })} */}
+        
       </Swiper>
 
       <Swiper
@@ -79,21 +64,7 @@ export default function CardSlider({ images }) {
         modules={[FreeMode, Navigation, Thumbs]}
         className="cardSwiper-thumbs"
       >
-        {/* {images.map((item, idx) => {
-          const src = typeof item === "string" ? item : item?.src;
-
-          return (
-          <SwiperSlide key={idx}>
-            <img
-              src={resolveImage(src)}
-              alt={item?.alt || `Зображення ${idx + 1}`}
-              onError={(e) => {
-                e.currentTarget.src = "/images/fallback.jpg";
-              }}
-            />
-          </SwiperSlide>
-          )
-        })} */}
+        
         {images.map((src, idx) => (
           <SwiperSlide key={idx}>
             <img
@@ -119,7 +90,7 @@ export default function CardSlider({ images }) {
             ✕
           </button>
 
-          {/* стопаем закрытие при клике по изображению */}
+          
           <div className="zoomContent" onClick={(e) => e.stopPropagation()}>
             {(() => {
         const item = images?.[activeIndex];
@@ -138,14 +109,7 @@ export default function CardSlider({ images }) {
                   }}
                 />
               )
-            {/* <img
-              className="zoomImage"
-              src={resolveImage(images[activeIndex])}
-              alt={`Зображення ${activeIndex + 1}`}
-              onError={(e) => {
-                e.currentTarget.src = "/images/fallback.jpg";
-              }}
-            /> */}
+           
             })()}
           </div>
         </div>

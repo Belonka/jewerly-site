@@ -45,14 +45,14 @@ export async function generateMetadata({ params }) {
       title: `${item.name} — Vetola`,
       description:  `Купіть ${item.name} за ${item.price} грн. Унікальні прикраси.`,
       images: ogImage ? [ogImage] : [],
-      // images: item.images[0],
+      
     },
     twitter: {
       card: "summary_large_image",
       title: item.name,
       description: `Ціна: ${item.price} грн`,
       images: ogImage ? [ogImage] : [],
-      // images: item.images[0],
+      
     },
   };
 }
@@ -89,8 +89,7 @@ export default async function PageItem({ params }) {
       <h2>{item.name}</h2>
       <div className="image-gallery">
         <CardSlider images={item.images ?? []} />
-      {/* <CardSlider images={images} />  */}
-      {/* <CardSlider images={item.images} />  */}
+      
       
       <div className='item-details'>
       <p className="p-price">
